@@ -1,0 +1,127 @@
+﻿Design Considerations for Drafting State Level Psychedelic Policy
+
+
+Introduction
+This document outlines key design considerations for state-level legislation to expand access to psychedelic substances for therapeutic, personal, or ceremonial use. It was developed to support legislators and policy advisors by compiling a comprehensive set of questions that reflect best practices in public policy design, drawing on Bardach’s Eightfold Path to Policy Analysis and additional frameworks such as Equity and Inclusion and the Learning Health System model. Each section presents foundational questions to guide high-level legislative decisions—distinct from regulatory implementation—and is informed by emerging state-level policy efforts, stakeholder testimony, and legal precedent. 
+Design Considerations for State-Level Psychedelic Policy Legislation
+
+
+1. Define the Problem
+* What problem does the legislation seek to solve, and why is action needed now?
+* What unmet health, social, or justice needs are associated with current psychedelic prohibition (e.g., mental illness, incarceration, inequity)?
+* What harms result from the status quo (e.g., untreated PTSD, underground markets, racial disparities)?
+* What populations are most impacted by the current policy and who is excluded from existing services?
+* What is the public demand or political pressure for change?
+
+
+2. Assemble the Evidence
+* What do existing research trials, real-world data, and pilot programs show about the safety and efficacy of psychedelic use or therapy for mental health problems?
+* What evidence supports alternative uses (spiritual, personal growth, end-of-life care)?
+* What types of data are lacking (e.g., long-term safety, public health impacts), and how can the legislation acknowledge this?
+* What lessons can be drawn from other states or countries?
+* What does disaggregated data show about how current laws affect BIPOC, LGBTQ+, low-income, disabled, and indigenous communities?
+* What does the best available evidence say about the public health benefits of responsible access to psilocybin, DMT, mescaline, and psilocin?
+* What are the short-term and long-term risks associated with nonclinical use of these substances?
+* How can adverse outcomes be monitored and mitigated?
+* What issues specific to each natural substance must be considered in order to formulate effective policy?
+
+
+
+
+
+
+3. Construct the Alternatives
+3.1. Scope of Legalization or Decriminalization
+* Will the legislation permit medical-only use, licensed therapeutic use, spiritual or ceremonial use, personal adult use, or decriminalization?
+* Which models of legalization or decriminalization are most suitable (e.g., grow-and-give, supervised use, religious exemptions)?
+* Should Maryland pursue state-licensed supervised use (as in Oregon/Colorado), user permits, or some combination?
+* Should Maryland decriminalize possession and use entirely? For what quantities?
+* Should criminal penalties be replaced by civil fines or eliminated?
+* Should the state expunge records and release individuals incarcerated for nonviolent psychedelic-related offenses?
+
+
+3.2. Supply Chain and Use Models
+* Will the policy create a regulated supply chain, permit home cultivation, or rely on community-based models?
+* Will Maryland permit production or sales? If so, what regulatory model should be adopted (nonprofit, state-licensed, cooperative, etc.)?
+* Will cultivation for personal use be permitted?
+* What types of products (e.g., whole mushrooms vs. extracts) and use formats (e.g., microdosing, ceremonial use) will be allowed?
+
+
+3.3. Access and Participation
+* Will access be through licensed professionals, trained facilitators, peer guides, or self-use?
+* Will local governments be allowed to opt out or regulate access (e.g. time, place and manner) within their jurisdiction?
+* Which populations will be eligible to access psychedelics (e.g., adults 21+, patients with qualifying diagnoses, end-of-life patients, spiritual practitioners)?
+* Will specific populations be prioritized for access (e.g., veterans, terminally ill patients, historically underserved communities)?
+* How will costs to users be controlled?
+
+
+3.4. Workforce and Facilitator Standards
+* What are appropriate education, certification, and safety training requirements for facilitators?
+* Should Maryland create licensure for facilitators, trip sitters, or integration coaches?
+* What role should existing professional licensing boards (e.g., for social work, psychology, counseling, nursing) play in approving or overseeing psychedelic facilitation?
+* Could collaborative practice agreements (e.g., between licensed medical providers and facilitators) provide an appropriate oversight mechanism without requiring full licensure?
+* How can the legislation balance the need for rigorous training and oversight with the need to control costs for practitioners and prevent excessive burdens that will be passed on to patients?
+* Should the state offer subsidized training, scholarships, or sliding-scale licensing fees to expand access to underrepresented or lower-income practitioners?
+
+
+3.5. Public Health, Data, and Oversight
+* What infrastructure is needed to track use, benefits, harms, and equity impacts?
+* How will data be used to adjust laws, policies, and regulations over time? 
+* How can Maryland collect data while respecting privacy and informed consent?
+
+
+3.6. Legal and Regulatory Mechanisms
+* Will the law set possession or dosage limits?
+* Will certain substances (e.g., ibogaine) be excluded or subject to higher scrutiny?
+* Will there be penalties for unlicensed distribution or advertising?
+* Will the bill include protections for state-licensed facilitators, patients, or growers from federal interference?
+* Will new agencies or advisory councils be created?
+* Are there constitutional constraints (e.g., public funds for private services, scope of practice)?
+
+
+4. Select the Criteria
+* What criteria will be prioritized in evaluating alternatives? (e.g., public health benefit, equity, feasibility, public support, cost, legal defensibility)
+* How will equity be defined and measured in this context?
+* What level of risk is acceptable, and how will trade-offs be assessed (e.g., between innovation and safety)?
+* What approaches will the legislation adopt to ensuring safety (e.g. precautionary, risk-benefit, proportionate, patient-centered, learning health system, etc?)
+* How can Maryland ensure equitable access across race, income, and geography?
+* How should Indigenous perspectives and spiritual practices be included and respected?
+* What reciprocity and protections should be offered to Indigenous communities?
+
+
+5. Project the Outcomes
+* How might the policy affect mental health outcomes, drug-related arrests, racial disparities, and health equity?
+* What impact could the policy have on youth perception and use, if any?
+* Could the policy lead to commercial exploitation, increased costs, or access inequality?
+* Will the policy shift burdens or resources to other systems (e.g., EMS, law enforcement, public health)?
+* What community benefits might arise from new jobs, research, or treatment access?
+
+
+
+
+
+
+6. Confront the Trade-offs
+* Does the policy balance innovation and caution? What compromises are being made regarding access vs. control?
+* Are protections for marginalized groups balanced with feasibility of implementation?
+* Could inclusionary goals (e.g., equity licensing) delay implementation, and is that acceptable?
+* How will policymakers balance local control with statewide consistency?
+* What ethical tensions arise between religious freedom, commercialization, and cultural protection?
+
+
+7. Decide
+* How will the legislation clearly articulate its intent, priorities, and implementation expectations?
+* Will the bill establish a new program, amend existing law, or delegate details to regulatory agencies?
+* What declarations of legislative intent, findings, or guiding principles will be included?
+* Is there bipartisan or cross-sector alignment to support passage?
+* Will the bill require periodic review or sunset clauses?
+* Will implementation be phased (e.g., veterans first, then broader access)?
+* Will a state agency or new body be tasked with rulemaking and oversight?
+* Will there be a structured rulemaking timeline and opportunity for public comment?
+
+
+8. Tell Your Story
+* How will the legislative narrative honor both scientific and Indigenous knowledge systems?
+* How will the bill distinguish therapeutic use from recreational use, especially in youth messaging?
+* Will the policy be positioned as a compassionate, evidence-informed response to a public health challenge?
+* How will legislators explain the rationale for inclusion, expungement, or legal exceptions?
