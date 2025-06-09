@@ -55,7 +55,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    font-weight: 400;
     }
 
 .card {
