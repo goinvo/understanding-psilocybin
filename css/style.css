@@ -62,22 +62,27 @@ body {
     background-color: #264653;
     box-shadow: -10px 10px 0 #264653;
 }
+
 .cell.shadow2{
     background-color: #2A9D8F;
     box-shadow: -10px 10px 0 #2A9D8F;
 }
+
 .cell.shadow3{
     background-color: #E9C46A;
     box-shadow: -10px 10px 0 #E9C46A;
 }
+
 .cell.shadow4{
     background-color: #F4A261;
     box-shadow: -10px 10px 0 #F4A261;
 }
+
 .cell.shadow4{
     background-color: #E76F51;
     box-shadow: -10px 10px 0 #E76F51;
 }
+
 .card {
     background-color: #ffffff;
     border-radius: 1rem;
