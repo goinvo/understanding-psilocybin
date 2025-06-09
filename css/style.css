@@ -58,7 +58,7 @@ body {
     font-weight: 400;
     }
 
-.cell.shadow {
+.cell.shadow1{
     background-color: #1a1a1a;
     box-shadow: -10px 10px 0 #000;
 }
