@@ -1,15 +1,15 @@
 body {
-    justify-content: center;
     display: flex;
-    align-items: center;
+    flex-direction: column; /* stack items vertically */
+    align-items: center; /* center horizontally */
+    justify-content: flex-start; /* top of page */
     min-height: 100vh;
-    line-height: 1.5;
+    margin: 0;
     background-color: #ffffff;
     color: #09090b;
-    margin: 0;
     font-family: sans-serif;
-    }
-
+    line-height: 1.5;
+}
 .container {
     max-width: 80rem;
     margin: 0 auto;
