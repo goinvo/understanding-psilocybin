@@ -5,6 +5,7 @@ body {
     justify-content: flex-start; /* top of page */
     min-height: 100vh;
     margin: 0;
+    margin-top: 20px;
     background-color: #ffffff;
     color: #09090b;
     font-family: sans-serif;
