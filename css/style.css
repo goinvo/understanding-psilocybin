@@ -80,7 +80,6 @@ body {
 
 .cell.invisible{
     display: flex;
-    justify-content: flex-start; /* left-align text */
     align-items: center;
     background: none;
     border: none;
