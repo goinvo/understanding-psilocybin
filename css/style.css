@@ -69,21 +69,16 @@ body {
 
 .cell.invisible{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* left-align text */
     align-items: center;
     background: none;
     border: none;
     box-shadow: none;
+    padding: 0 0.5rem;
+    white-space: normal; /* allow wrapping */
+    overflow: visible;   /* don't cut off overflow */
+    text-align: left;
 }
-
-.cell.invisible-wide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    box-shadow: none;
-} 
 
 .cell.shadow1{
     background-color: #264653;
