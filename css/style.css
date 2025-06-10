@@ -77,7 +77,7 @@ body {
     padding: 0 0.5rem;
     white-space: normal; /* allow wrapping */
     overflow: visible;   /* don't cut off overflow */
-    text-align: left;
+    text-align: right;
 }
 
 .cell.shadow1{
