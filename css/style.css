@@ -79,6 +79,7 @@ body {
     }
 
 .cell.invisible{
+    curosr: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
