@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!helloMsg) {
         helloMsg = document.createElement('span');
         helloMsg.className = 'hello-message';
-        helloMsg.textContent = 'Hello';
+        helloMsg.textContent = 'Removal of criminal penalties or enforcement for personal use/posession.';
         helloMsg.style.display = 'none';
         leftCell.appendChild(helloMsg);
     }
