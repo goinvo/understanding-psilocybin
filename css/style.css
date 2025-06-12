@@ -34,7 +34,7 @@ body {
     font-size: 1.125rem;
     font-weight: 300;
     color: #a19895;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem; /* Reduce this value for less space */
     animation: fadeIn 0.6s ease-out;
 }
 
