@@ -92,6 +92,11 @@ body {
     text-align: left;
 }
 
+.cell.invisible:hover {
+    background: #f0f0f0;
+    border: 1px dashed #aaa;
+}
+
 .cell.shadow1{
     background-color: #264653;
     box-shadow: -10px 10px 0 #264653;
