@@ -97,6 +97,14 @@ body {
     border: 1px dashed #aaa;
 }
 
+.hello-message {
+    font-size: 1.1rem;
+    color: #264653;
+    background: #fffbe7;
+    border-radius: 4px;
+    padding: 0.25em 0.5em;
+}
+
 .cell.shadow1{
     background-color: #264653;
     box-shadow: -10px 10px 0 #264653;

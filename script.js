@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     const cells = document.querySelectorAll('.grid .cell');
-    // "1. Deprioritization/ Decriminalization" is index 8, the cell to its left is index 7
+    // The label cell is now at index 8, left cell at index 7
+    const leftCell = cells[7];
     const labelCell = cells[8];
-    const helloCell = cells[7];
-    if (!labelCell || !helloCell) return;
+    if (!leftCell || !labelCell) return;
 
-    // Create a span for the hello message inside the helloCell
-    let helloMsg = helloCell.querySelector('.hello-message');
+    // Create a span for the hello message inside the leftCell
+    let helloMsg = leftCell.querySelector('.hello-message');
     if (!helloMsg) {
         helloMsg = document.createElement('span');
         helloMsg.className = 'hello-message';
         helloMsg.textContent = 'Hello';
         helloMsg.style.display = 'none';
-        helloCell.appendChild(helloMsg);
+        leftCell.appendChild(helloMsg);
     }
 
     labelCell.style.cursor = 'pointer';
@@ -21,3 +21,4 @@ document.addEventListener('DOMContentLoaded', function () {
         helloMsg.style.display = (helloMsg.style.display === 'none') ? 'block' : 'none';
     });
 });
+
