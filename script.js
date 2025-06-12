@@ -1,21 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
     const cells = document.querySelectorAll('.grid .cell');
-    // The cell with "1. Deprioritization/ Decriminalization" is index 8
-    const targetCell = cells[8];
-    if (!targetCell) return;
+    // "1. Deprioritization/ Decriminalization" is index 8, the cell to its left is index 7
+    const labelCell = cells[8];
+    const helloCell = cells[7];
+    if (!labelCell || !helloCell) return;
 
-    let helloMsg = document.getElementById('hello-message');
+    // Create a span for the hello message inside the helloCell
+    let helloMsg = helloCell.querySelector('.hello-message');
     if (!helloMsg) {
-        helloMsg = document.createElement('div');
-        helloMsg.id = 'hello-message';
+        helloMsg = document.createElement('span');
+        helloMsg.className = 'hello-message';
         helloMsg.textContent = 'Hello';
         helloMsg.style.display = 'none';
-        document.body.appendChild(helloMsg);
+        helloCell.appendChild(helloMsg);
     }
 
-    targetCell.style.cursor = 'pointer'; // Make it look clickable
+    labelCell.style.cursor = 'pointer';
 
-    targetCell.addEventListener('click', function () {
+    labelCell.addEventListener('click', function () {
         helloMsg.style.display = (helloMsg.style.display === 'none') ? 'block' : 'none';
     });
 });
