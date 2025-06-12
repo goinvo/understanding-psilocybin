@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!helloCell.classList.contains("visible")) {
         helloCell.classList.add("visible");
 
-        // Optional: auto-hide again after a few seconds
-        setTimeout(() => {
-          helloCell.classList.remove("visible");
-        }, 3000);
       }
     });
   });
