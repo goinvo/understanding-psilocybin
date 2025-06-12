@@ -1,13 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const helloCell = document.getElementById("hello-cell");
-  const col2Cells = document.querySelectorAll(".col2");
+const hoverTrigger = document.getElementById('hover-trigger');
+const helloCell = document.getElementById('hello-cell');
 
-  col2Cells.forEach((cell) => {
-    cell.addEventListener("click", () => {
-      if (!helloCell.classList.contains("visible")) {
-        helloCell.classList.add("visible");
+hoverTrigger.addEventListener('mouseenter', () => {
+  helloCell.classList.add('visible');
+});
 
-      }
-    });
-  });
+hoverTrigger.addEventListener('mouseleave', () => {
+  helloCell.classList.remove('visible');
 });
