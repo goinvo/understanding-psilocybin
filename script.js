@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleCell = document.querySelector(".col2");
-  const targetCell = document.querySelector(".col1");
+document.addEventListener('DOMContentLoaded', function () {
+  const triggerCell = document.querySelector('.col2');
+  const helloCell = document.getElementById('hello-cell');
 
-  toggleCell.addEventListener("click", () => {
-    targetCell.classList.toggle("visible");
+  triggerCell.addEventListener('click', function () {
+    helloCell.classList.toggle('visible');
   });
 });

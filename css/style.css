@@ -121,14 +121,16 @@ body {
     animation: fadeIn 0.6s ease-out;
 }
 
-.col1 {
+/* Starts hidden and off-screen */
+#hello-cell {
   transform: translateX(-100%);
   opacity: 0;
   pointer-events: none;
   transition: transform 0.4s ease, opacity 0.4s ease;
-  will-change: transform, opacity;
 }
-.col1.visible {
+
+/* When visible */
+#hello-cell.visible {
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
