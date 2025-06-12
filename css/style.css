@@ -39,6 +39,10 @@ body {
     animation: fadeIn 0.6s ease-out;
 }
 
+.header .subheading + .subheading {
+    margin-top: 0;
+}
+
 .body-text {
     font-family: 'Montserrat';
     font-size: 1.125rem;
