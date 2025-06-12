@@ -121,6 +121,29 @@ body {
     animation: fadeIn 0.6s ease-out;
 }
 
+.info-panel {
+  position: absolute;
+  width: 200px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.info-panel.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-10px);
+}
+
+.info-panel.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .card {
     background-color: #ffffff;
     border-radius: 1rem;
