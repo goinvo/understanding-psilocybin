@@ -98,9 +98,10 @@ body {
 }
 
 .hello-message {
-    font-size: 1.1rem;
-    color: #264653;
-    background: #fffbe7;
+    font-size: 1.125rem;
+    font-family: 'Montserrat';
+    color: #09090b;
+    background: #ffff;
     border-radius: 4px;
     padding: 0.25em 0.5em;
 }
