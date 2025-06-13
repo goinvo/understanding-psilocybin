@@ -30,7 +30,7 @@ body {
     }
 
 .subheading {
-    font-family: 'Montserrat';
+    font-family: 'Asap Condensed';
     font-size: 1.125rem;
     font-weight: 300;
     color: #a19895;
@@ -43,7 +43,7 @@ body {
 }
 
 .body-text {
-    font-family: 'Montserrat';
+    font-family: 'Asap Condensed';
     font-size: 1.125rem;
     color: #09090b;
     max-width: 48rem;
@@ -52,7 +52,7 @@ body {
     }
 
 .label-text {
-    font-family: 'Montserrat';
+    font-family: 'Asap Condensed';
     font-size: 1.125rem;
     font-weight: 500;
     color: #09090b;
@@ -106,7 +106,7 @@ body {
 }
 
 .hello-message {
-    font-family: 'Montserrat';
+    font-family: 'Asap Condensed';
     font-size: 0.85rem;
     color: #09090b;
     line-height: 1.625;
