@@ -116,32 +116,22 @@ body {
 }
 
 .cell.shadow1{
-    background-color: #264653;
-    box-shadow: -10px 10px 0 #264653;
+    background-color: #89b0c0;
     animation: fadeIn 0.6s ease-out;
 }
 
 .cell.shadow2{
-    background-color: #2A9D8F;
-    box-shadow: -10px 10px 0 #2A9D8F;
+    background-color: #93CBC4;
     animation: fadeIn 0.6s ease-out;
 }
 
 .cell.shadow3{
-    background-color: #E9C46A;
-    box-shadow: -10px 10px 0 #E9C46A;
-    animation: fadeIn 0.6s ease-out;
-}
-
-.cell.shadow4{
-    background-color: #F4A261;
-    box-shadow: -10px 10px 0 #F4A261;
+    background-color: #EDD59D;
     animation: fadeIn 0.6s ease-out;
 }
 
 .cell.shadow5{
-    background-color: #E76F51;
-    box-shadow: -10px 10px 0 #E76F51;
+    background-color: #EDA293;
     animation: fadeIn 0.6s ease-out;
 }
 
