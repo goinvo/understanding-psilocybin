@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', function () {
     const cells = document.querySelectorAll('.grid .cell');
     // The label cell is now at index 8, left cell at index 7
@@ -22,3 +23,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+*/
