@@ -75,7 +75,9 @@ body {
     flex-direction: column;      /* stack content vertically */
     justify-content: center;
     align-items: center;
-    font-weight: 400;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    font-size: 0.875rem;
     animation: fadeIn 0.6s ease-out;
     overflow-wrap: break-word;   /* allow breaking long words */
     word-break: break-word;      /* allow breaking long words */
@@ -117,21 +119,33 @@ body {
 
 .cell.shadow1{
     background-color: #89b0c0;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    font-size: 0.875rem;
     animation: fadeIn 0.6s ease-out;
 }
 
 .cell.shadow2{
     background-color: #93CBC4;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    font-size: 0.875rem;
     animation: fadeIn 0.6s ease-out;
 }
 
 .cell.shadow3{
     background-color: #EDD59D;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    font-size: 0.875rem;
     animation: fadeIn 0.6s ease-out;
 }
 
 .cell.shadow5{
     background-color: #EDA293;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    font-size: 0.875rem;
     animation: fadeIn 0.6s ease-out;
 }
 
