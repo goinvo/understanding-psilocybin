@@ -58,7 +58,7 @@ body {
 
 .main-content {
     flex: 1;
-    padding: 0 1.5rem 4rem;
+    padding: 0 0 4rem 0; /* Remove left/right padding */
     }
 
 .grid {
