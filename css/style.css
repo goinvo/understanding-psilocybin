@@ -1,15 +1,9 @@
 body {
     display: flex;
-    flex-direction: column; /* stack items vertically */
-    align-items: center; /* center horizontally */
-    justify-content: flex-start; /* top of page */
+    flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-    background-color: #ffffff;
-    color: #09090b;
-    font-family: sans-serif;
-    line-height: 1.5;
 }
+
 .container {
     max-width: 80rem;
     margin: 0 auto;
@@ -63,6 +57,7 @@ body {
     }
 
 .main-content {
+    flex: 1;
     padding: 0 1.5rem 4rem;
     }
 
@@ -151,16 +146,12 @@ body {
 }
 
 .site-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background: #f7f7f7;
     color: #888;
     text-align: center;
     padding: 1rem 0;
     font-size: 1rem;
-    z-index: 100;
     box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
 }
 
