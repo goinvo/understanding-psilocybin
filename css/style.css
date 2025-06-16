@@ -298,6 +298,7 @@ from {
     .label-text {
         font-size: 1rem;
         padding-left: 0.25rem;
+        
     }
 
     .site-footer {
@@ -319,6 +320,7 @@ from {
     padding: 1rem;
   }
   .category-label {
+    font-family: 'Asap Condensed';
     font-weight: bold;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
@@ -335,10 +337,12 @@ from {
     display: inline-block;
     min-width: 2.5em;
     font-weight: 600;
+    font-family:'Asap Condensed';
     color: #888;
   }
   .state-value {
     margin-left: 1em;
+    font-family: 'Asap Condensed';
   }
 }
 
