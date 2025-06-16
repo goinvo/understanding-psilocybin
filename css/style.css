@@ -304,6 +304,42 @@ from {
         font-size: 0.95rem;
         padding: 0.75rem 0;
     }
+
+  .grid { display: none; }
+  .mobile-grid {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  .category-block {
+    margin-bottom: 2rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  .category-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #264653;
+  }
+  .state-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+  }
+  .state-label {
+    display: inline-block;
+    min-width: 2.5em;
+    font-weight: 600;
+    color: #888;
+  }
+  .state-value {
+    margin-left: 1em;
+  }
 }
 
 /* By default, show desktop grid and hide mobile grid */
