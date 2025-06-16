@@ -284,14 +284,14 @@ from {
     }
 
     .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
+        grid-template-columns: 1fr; /* Stack all cells vertically */
+        grid-auto-rows: minmax(48px, auto);
         gap: 3px;
     }
 
     .cell {
-        font-size: 0.95rem;
-        min-height: 48px;
+        min-width: 0;
+        font-size: 1rem;
         padding: 0.5rem 0.25rem;
     }
 
