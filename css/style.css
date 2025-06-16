@@ -239,7 +239,3 @@ from {
             grid-template-columns: repeat(4, 1fr);
         }
     }
-
-.grid .cell:nth-child(7n+1) {
-    border: none;
-}
