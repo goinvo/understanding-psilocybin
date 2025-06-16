@@ -305,3 +305,21 @@ from {
         padding: 0.75rem 0;
     }
 }
+
+/* By default, show desktop grid and hide mobile grid */
+.grid {
+  display: grid;
+}
+.mobile-grid {
+  display: none;
+}
+
+/* On mobile, hide desktop grid and show mobile grid */
+@media (max-width: 767px) {
+  .grid {
+    display: none !important;
+  }
+  .mobile-grid {
+    display: block !important;
+  }
+}
