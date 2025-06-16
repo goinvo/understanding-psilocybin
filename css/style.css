@@ -321,10 +321,10 @@ from {
   }
   .category-label {
     font-family: 'Asap Condensed';
-    font-weight: bold;
+    font-weight: 300;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
-    color: #264653;
+    color: #09090b
   }
   .state-row {
     display: flex;
@@ -336,13 +336,14 @@ from {
   .state-label {
     display: inline-block;
     min-width: 2.5em;
-    font-weight: 600;
+    font-weight: 300;
     font-family:'Asap Condensed';
-    color: #888;
+    color: #09090b;
   }
   .state-value {
     margin-left: 1em;
     font-family: 'Asap Condensed';
+    font-weight: 200;
   }
 }
 
