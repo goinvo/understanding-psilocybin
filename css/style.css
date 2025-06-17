@@ -320,30 +320,49 @@ from {
     padding: 1rem;
   }
   .category-label {
-    font-family: 'Asap Condensed';
-    font-weight: 300;
+    font-weight: bold;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
-    color: #09090b
+    color: #264653;
+  }
+  /* 2x5 grid for state/value pairs */
+  .category-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .category-block .state-row-group {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, 1fr);
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
   }
   .state-row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 0.3rem;
+    display: contents; /* allows children to be grid items */
+  }
+  .state-label, .state-value {
+    padding: 0.75em 0.5em;
+    border-bottom: 1px solid #eee;
     font-size: 1rem;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
   }
   .state-label {
-    display: inline-block;
-    min-width: 2.5em;
-    font-weight: 300;
-    font-family:'Asap Condensed';
-    color: #09090b;
+    border-right: 1px solid #eee;
+    font-weight: 600;
+    color: #888;
+    background: #f5f5f5;
+    justify-content: flex-end;
   }
   .state-value {
-    margin-left: 1em;
-    font-family: 'Asap Condensed';
-    font-weight: 200;
+    justify-content: flex-start;
+    background: #fff;
+  }
+  /* Remove border from last row */
+  .state-label:nth-last-of-type(5), .state-value:nth-last-of-type(5) {
+    border-bottom: none;
   }
 }
 
