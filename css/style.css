@@ -333,7 +333,7 @@ from {
   }
   .category-block .state-row-group {
     display: grid;
-    grid-template-columns: 30px 1fr;
+    grid-template-columns: 90px 1fr;
     grid-template-rows: repeat(5, 1fr);
     border: 1px solid #eee;
     border-radius: 4px;
@@ -355,7 +355,7 @@ from {
     font-family: 'Asap Condensed';
     font-weight: 300;
     color: #09090b;
-    background: #f5f5f5;
+    background: #ffff;
     justify-content: flex-end;
   }
   .state-value {
