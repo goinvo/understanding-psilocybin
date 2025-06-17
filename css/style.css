@@ -192,6 +192,10 @@ body {
     animation: fadeIn 0.6s ease-out;
     }
 
+.ol {
+    padding-left: 0;
+}
+
 /*
 .card:hover {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -342,6 +346,7 @@ from {
   }
   .state-row {
     display: contents; /* allows children to be grid items */
+
   }
   .state-label, .state-value {
     padding: 0.75em 0.5em;
@@ -350,6 +355,7 @@ from {
     background: #fafafa;
     display: flex;
     align-items: center;
+
   }
   .state-label {
     border-right: 1px solid #eee;
@@ -422,6 +428,10 @@ from {
   /* Remove border from last row */
   .state-label:nth-last-of-type(5), .state-value:nth-last-of-type(5) {
     border-bottom: none;
+  }
+
+  ol {
+    padding-left: 0;
   }
 }
 
