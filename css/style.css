@@ -452,12 +452,13 @@ from {
   }
   .state-label,
   .state-value0, .state-value1, .state-value2, .state-value3, .state-value5 {
-    border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
     height: 100%;
     font-size: 1rem;
     padding: 0.75em 0.5em;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
   }
   .state-label {
     border-right: 1px solid #eee;
@@ -472,14 +473,24 @@ from {
     justify-content: flex-start;
     background: #fff;
     width: 100%;
+    border-left: none;
+    border-right: none;
   }
-  /* Remove border from last row */
-  .state-label:nth-last-of-type(5),
-  .state-value0:nth-last-of-type(5),
-  .state-value1:nth-last-of-type(5),
-  .state-value2:nth-last-of-type(5),
-  .state-value3:nth-last-of-type(5),
-  .state-value5:nth-last-of-type(5) {
+  /* Remove double borders for the first and last rows */
+  .state-label:first-of-type,
+  .state-value0:first-of-type,
+  .state-value1:first-of-type,
+  .state-value2:first-of-type,
+  .state-value3:first-of-type,
+  .state-value5:first-of-type {
+    border-top: none;
+  }
+  .state-label:last-of-type,
+  .state-value0:last-of-type,
+  .state-value1:last-of-type,
+  .state-value2:last-of-type,
+  .state-value3:last-of-type,
+  .state-value5:last-of-type {
     border-bottom: none;
   }
 }
