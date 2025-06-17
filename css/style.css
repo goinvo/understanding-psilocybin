@@ -320,10 +320,11 @@ from {
     padding: 1rem;
   }
   .category-label {
-    font-weight: bold;
+    font-family: 'Asap Condensed';
+    font-weight: 300;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
-    color: #264653;
+    color: #09090b;
   }
   /* 2x5 grid for state/value pairs */
   .category-block {
@@ -332,7 +333,7 @@ from {
   }
   .category-block .state-row-group {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 30px 1fr;
     grid-template-rows: repeat(5, 1fr);
     border: 1px solid #eee;
     border-radius: 4px;
@@ -351,13 +352,17 @@ from {
   }
   .state-label {
     border-right: 1px solid #eee;
-    font-weight: 600;
-    color: #888;
+    font-family: 'Asap Condensed';
+    font-weight: 300;
+    color: #09090b;
     background: #f5f5f5;
     justify-content: flex-end;
   }
   .state-value {
     justify-content: flex-start;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    color: #09090b;
     background: #fff;
   }
   /* Remove border from last row */
