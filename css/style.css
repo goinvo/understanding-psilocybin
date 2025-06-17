@@ -98,7 +98,6 @@ body {
 }
 
 .cell.invisible{
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -361,7 +360,11 @@ from {
     justify-content: flex-end;
   }
   .state-value0 {
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    height: 100%; 
+    padding-left: 0.5em;
     font-family: 'Asap Condensed';
     font-weight: 200;
     color: #09090b;
@@ -369,7 +372,11 @@ from {
   }
 
   .state-value1 {
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    height: 100%; 
+    padding-left: 0.5em;
     font-family: 'Asap Condensed';
     font-weight: 200;
     color: #09090b;
@@ -377,7 +384,11 @@ from {
   }
 
   .state-value2 {
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    height: 100%; 
+    padding-left: 0.5em;
     font-family: 'Asap Condensed';
     font-weight: 200;
     color: #09090b;
@@ -385,7 +396,11 @@ from {
   }
 
   .state-value3 {
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    height: 100%; 
+    padding-left: 0.5em;
     font-family: 'Asap Condensed';
     font-weight: 200;
     color: #09090b;
@@ -393,7 +408,11 @@ from {
   }
 
   .state-value5 {
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    height: 100%; 
+    padding-left: 0.5em;
     font-family: 'Asap Condensed';
     font-weight: 200;
     color: #09090b;
