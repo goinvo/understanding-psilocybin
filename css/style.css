@@ -358,13 +358,46 @@ from {
     background: #ffff;
     justify-content: flex-end;
   }
-  .state-value {
+  .state-value0 {
     justify-content: flex-start;
     font-family: 'Asap Condensed';
     font-weight: 200;
     color: #09090b;
-    background: #fff;
+    background: #fff
   }
+
+  .state-value1 {
+    justify-content: flex-start;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    color: #09090b;
+    background: #6E9FB3
+  }
+
+  .state-value2 {
+    justify-content: flex-start;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    color: #09090b;
+    background: #A7D3B1;
+  }
+
+  .state-value3 {
+    justify-content: flex-start;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    color: #09090b;
+    background: #E9C46A;
+  }
+
+  .state-value5 {
+    justify-content: flex-start;
+    font-family: 'Asap Condensed';
+    font-weight: 200;
+    color: #09090b;
+    background: #EC9887;
+  }
+
   /* Remove border from last row */
   .state-label:nth-last-of-type(5), .state-value:nth-last-of-type(5) {
     border-bottom: none;
