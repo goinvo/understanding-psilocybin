@@ -336,7 +336,7 @@ from {
     display: grid;
     grid-template-columns: 90px 1fr;
     grid-template-rows: repeat(5, 1fr);
-    border: 1px solid #888;
+    border: 1px solid #fff;
     border-radius: 4px;
     overflow: hidden;
   }
