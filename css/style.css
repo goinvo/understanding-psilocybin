@@ -10,7 +10,7 @@ body {
     }
 
 .header {
-    width: 100%;
+    /*width: 100%; */ /*For some reason, this is causing an overflow*/
     padding: 2rem 1.5rem;
     }
 
