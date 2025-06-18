@@ -431,7 +431,7 @@ from {
     border-bottom: none;
   }
 
-  ol {
+  ol .body-text{
     padding-left: 0;
     margin-left: 0;
   }
