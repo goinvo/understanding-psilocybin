@@ -65,10 +65,10 @@ body {
 }
 
 .label-number {
-    display: block;
+    /* display: block; */
     text-align: right;
-    margin-right: 0;
-    flex-shrink: 0;
+    /* margin-right: 0;
+    flex-shrink: 0; */
     font-variant-numeric: tabular-nums;
 }
 
