@@ -48,8 +48,9 @@ body {
     }
 
 .label-text {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 2.5em 1fr;
+    align-items: start;
     font-family: 'Asap Condensed';
     font-size: 1.125rem;
     font-weight: 300;
@@ -60,14 +61,13 @@ body {
     word-break: break-word;
     text-align: left;
     padding-left: 0.5rem; /* optional: for a little space from the cell border */
+    gap: 0.5em;
 }
 
 .label-number {
-    display: inline-block;
-    width: 2.5em;
-    min-width: 2.5em; /* enough space for "8." or "10." */
+    display: block;
     text-align: right;
-    margin-right: 0.5em;
+    margin-right: 0;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
 }
