@@ -431,12 +431,6 @@ from {
   .state-label:nth-last-of-type(5), .state-value:nth-last-of-type(5) {
     border-bottom: none;
   }
-
-  ol.body-text{
-    padding-left: 0;
-    margin-left: 0;
-    list-style-position: outside;
-  }
 }
 
 /* By default, show desktop grid and hide mobile grid */
