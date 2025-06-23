@@ -195,6 +195,7 @@ body {
 .ol {
     padding-left: 0;
     margin-left: 0;
+    list-style-position: inside;
 }
 
 /*
@@ -434,6 +435,7 @@ from {
   ol.body-text{
     padding-left: 0;
     margin-left: 0;
+    list-style-position: outside;
   }
 }
 
