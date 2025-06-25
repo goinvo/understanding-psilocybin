@@ -468,8 +468,8 @@ from {
 /* Speech bubble styling */
 .speech-bubble {
   position: absolute;
-  left: 2.5rem; /* adjust as needed to anchor to header */
-  top: 4.5rem;  /* adjust as needed to anchor to header */
+  right: 0;           /* Anchor to the right */
+  top: 0.5rem;        /* Align with header, adjust as needed */
   max-width: 320px;
   background: #fff;
   border: 2px solid #09090b;
@@ -486,18 +486,23 @@ from {
 .speech-bubble::after {
   content: "";
   position: absolute;
-  top: -18px;
-  left: 2.5em;
-  border-width: 0 18px 18px 18px;
+  top: 1.2em; /* adjust to point at the header */
+  right: 100%; /* position at the left edge of the bubble */
+  margin-top: 0;
+  border-width: 12px 18px 12px 0;
   border-style: solid;
-  border-color: transparent transparent #fff transparent;
-  filter: drop-shadow(0 -2px 0 #09090b);
+  border-color: transparent #fff transparent transparent;
+  filter: drop-shadow(-2px 0 0 #09090b);
 }
-#bubble-toggle {
-  background: none;
-  border: none;
-  font-size: 1.2em;
-  cursor: pointer;
-  margin-left: 0.5em;
-  vertical-align: middle;
+
+/* Responsive: stack below header on small screens */
+@media (max-width: 767px) {
+  .speech-bubble {
+    position: static;
+    margin: 1em 0 0 0;
+    max-width: 100%;
+  }
+  .speech-bubble::after {
+    display: none;
+  }
 }
