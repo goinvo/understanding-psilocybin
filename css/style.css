@@ -477,7 +477,7 @@ from {
   top: 50%;
   transform: translateY(-50%);
   margin-left: 20px; /* Space between text and bubble */
-  max-width: 320px;
+  max-width: 480px;
   background: #fff;
   border: 2px solid #09090b;
   border-radius: 1.5em;
