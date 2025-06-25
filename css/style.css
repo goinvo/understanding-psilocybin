@@ -477,7 +477,7 @@ from {
   top: 50%;
   transform: translateY(-50%);
   margin-left: 20px; /* Space between text and bubble */
-  max-width: 480px;
+  width: 480px;
   background: #fff;
   border: 2px solid #09090b;
   border-radius: 1.5em;
@@ -488,7 +488,6 @@ from {
   color: #09090b;
   z-index: 100;
   animation: fadeIn 0.4s;
-  min-width: 220px;
 }
 
 .speech-bubble::after {
