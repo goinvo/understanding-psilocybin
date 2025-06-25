@@ -24,3 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 */
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('bubble-toggle');
+  const bubble = document.getElementById('speech-bubble');
+  toggle.addEventListener('click', function() {
+    bubble.hidden = !bubble.hidden;
+  });
+});
+

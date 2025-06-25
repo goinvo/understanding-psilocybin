@@ -10,6 +10,7 @@ body {
     }
 
 .header {
+    position: relative;
     /*width: 100%; */ /*For some reason, this is causing an overflow*/
     padding: 2rem 1.5rem;
     }
@@ -462,4 +463,41 @@ from {
   .mobile-grid {
     display: block !important;
   }
+}
+
+/* Speech bubble styling */
+.speech-bubble {
+  position: absolute;
+  left: 2.5rem; /* adjust as needed to anchor to header */
+  top: 4.5rem;  /* adjust as needed to anchor to header */
+  max-width: 320px;
+  background: #fff;
+  border: 2px solid #09090b;
+  border-radius: 1.5em;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.08);
+  padding: 1em 1.5em;
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 1.1rem;
+  color: #09090b;
+  z-index: 100;
+  animation: fadeIn 0.4s;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 2.5em;
+  border-width: 0 18px 18px 18px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  filter: drop-shadow(0 -2px 0 #09090b);
+}
+#bubble-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 0.5em;
+  vertical-align: middle;
 }
