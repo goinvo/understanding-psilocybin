@@ -242,6 +242,21 @@ from {
         }
     }
 
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(-50%);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(-50%);
+  }
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
     .header {
@@ -487,7 +502,8 @@ from {
   font-size: 1.1rem;
   color: #09090b;
   z-index: 100;
-  animation: fadeIn 0.4s;
+  animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
+  transition: opacity 0.15s, transform 0.15s;
 }
 
 .speech-bubble::after {
