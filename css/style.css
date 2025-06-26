@@ -522,9 +522,9 @@ from {
 @media (max-width: 767px) {
   .speech-bubble {
     position: absolute;
-    left: 50%;
+    left: 8px; /* align bubble close to the left edge */
     top: 110%; /* just below the header text */
-    transform: translateX(-50%) scale(0.98);
+    transform: none;
     margin: 0;
     width: 95vw;
     max-width: 340px;
@@ -534,13 +534,13 @@ from {
     z-index: 100;
   }
   .speech-bubble::after {
-    left: 50%;
-    top: -18px; /* position above the bubble */
-    transform: translateX(-50%);
-    border-width: 0 14px 14px 14px;
+    left: -18px; /* position tail to the left of the bubble */
+    top: 24px;   /* adjust as needed to point toward header */
+    transform: none;
+    border-width: 14px 18px 14px 0;
     border-style: solid;
-    border-color: transparent transparent #fff transparent;
-    filter: drop-shadow(0 -2px 0 #09090b);
+    border-color: transparent #fff transparent transparent;
+    filter: drop-shadow(-2px 0 0 #09090b);
     display: block;
     content: "";
     position: absolute;
