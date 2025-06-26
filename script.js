@@ -30,5 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
   toggle.addEventListener('click', function() {
     bubble.hidden = !bubble.hidden;
   });
+  // Optional: allow Enter/Space to toggle for accessibility
+  toggle.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      bubble.hidden = !bubble.hidden;
+      e.preventDefault();
+    }
+  });
 });
 
