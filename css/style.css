@@ -521,11 +521,26 @@ from {
 /* Responsive: stack below header on small screens */
 @media (max-width: 767px) {
   .speech-bubble {
-    position: static;
-    margin: 1em 0 0 0;
-    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 110%; /* just below the header text */
+    transform: translateX(-50%) scale(0.98);
+    margin: 0;
+    width: 95vw;
+    max-width: 340px;
+    min-width: 0;
+    padding: 0.75em 1em;
+    font-size: 1rem;
+    z-index: 100;
   }
   .speech-bubble::after {
-    display: none;
+    left: 50%;
+    top: -18px;
+    transform: translateX(-50%) rotate(90deg);
+    border-width: 0 12px 18px 12px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    filter: drop-shadow(0 -2px 0 #09090b);
+    display: block;
   }
 }
