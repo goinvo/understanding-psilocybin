@@ -535,12 +535,14 @@ from {
   }
   .speech-bubble::after {
     left: 50%;
-    top: -18px;
-    transform: translateX(-50%) rotate(90deg);
-    border-width: 0 12px 18px 12px;
+    top: -18px; /* position above the bubble */
+    transform: translateX(-50%);
+    border-width: 0 14px 14px 14px;
     border-style: solid;
     border-color: transparent transparent #fff transparent;
     filter: drop-shadow(0 -2px 0 #09090b);
     display: block;
+    content: "";
+    position: absolute;
   }
 }
