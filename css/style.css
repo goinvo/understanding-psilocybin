@@ -534,15 +534,15 @@ from {
     z-index: 100;
   }
   .speech-bubble::after {
-    left: -18px; /* position tail to the left of the bubble */
-    top: 24px;   /* adjust as needed to point toward header */
-    transform: none;
+    content: "";
+    position: absolute;
+    left: -18px; /* tail outside the bubble */
+    top: 50%; /* vertically center */
+    transform: translateY(-50%);
     border-width: 14px 18px 14px 0;
     border-style: solid;
     border-color: transparent #fff transparent transparent;
     filter: drop-shadow(-2px 0 0 #09090b);
     display: block;
-    content: "";
-    position: absolute;
   }
 }
