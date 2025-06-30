@@ -554,13 +554,13 @@ from {
   vertical-align: -0.2em; /* aligns with text baseline, tweak as needed */
   margin-left: 0.25em;
   cursor: pointer;
-  width: 1.2em;
-  height: 1.2em;
+  width: 0.8em;
+  height: 0.8em;
 }
 
 .megaphone-toggle svg {
-  width: 1.2em;
-  height: 1.2em;
+  width: 0.8em;
+  height: 0.8em;
   display: block;
 }
 
