@@ -37,5 +37,19 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
     }
   });
+
+  const megaphone = document.getElementById('megaphone-toggle');
+  const ctaBubble = document.getElementById('cta-bubble');
+  if (megaphone && ctaBubble) {
+    megaphone.addEventListener('click', function() {
+      ctaBubble.hidden = !ctaBubble.hidden;
+    });
+    megaphone.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        ctaBubble.hidden = !ctaBubble.hidden;
+        e.preventDefault();
+      }
+    });
+  }
 });
 
