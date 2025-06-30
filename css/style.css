@@ -544,5 +544,7 @@ from {
     /* border-color: transparent #fff transparent transparent; */
     /* filter: drop-shadow(-2px 0 0 #09090b); */
     /* display: block; */
+    display: none !important;
+    content: none !important;
   }
 }
