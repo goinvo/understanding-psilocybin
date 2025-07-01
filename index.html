@@ -20,19 +20,8 @@
             <h1 class="main-title" id="main-title">
               <span class="header-inline" id="bubble-toggle" tabindex="0" style="cursor:pointer;">
                 Understanding Psilocybin
-                <span class="megaphone-toggle" id="megaphone-toggle" tabindex="0" aria-label="Toggle call to action">
-                  <svg viewBox="0 0 48 32" width="1.2em" height="1.2em" fill="none">
-                    <!-- Body (rectangle): shorter and shifted down -->
-                    <rect x="6" y="13" width="8" height="6" rx="2" fill="none" stroke="#09090b" stroke-width="2"/>
-                    <!-- Horn (trapezoid): matches top and bottom of body -->
-                    <polygon points="14,13 32,9 32,23 14,19" fill="none" stroke="#09090b" stroke-width="2"/>
-                    <!-- Handle (rectangle) -->
-                    <rect x="8" y="19" width="3" height="6" rx="1" fill="none" stroke="#09090b" stroke-width="2"/>
-                    <!-- Three sound lines with 2px gap from horn (horn ends at x=32, so start at x=34) -->
-                    <line x1="35" y1="11" x2="44" y2="3" stroke="#09090b" stroke-width="2" class="megaphone-wave"/>
-                    <line x1="36" y1="16" x2="46" y2="16" stroke="#09090b" stroke-width="2" class="megaphone-wave wave2"/>
-                    <line x1="35" y1="21" x2="44" y2="29" stroke="#09090b" stroke-width="2" class="megaphone-wave wave3"/>
-                  </svg>
+                <span class="megaphone-toggle" id="megaphone-toggle" tabindex="0" aria-label="Toggle call to action" style="width:1.2em; height:1.2em; display:inline-block; vertical-align:-0.2em;">
+                  <canvas id="megaphone3d" width="48" height="32" style="width:1.2em; height:1.2em; display:block;"></canvas>
                 </span>
                 <span id="cta-bubble" class="cta-bubble" hidden>
                   <span class="cta-bubble-content">
@@ -320,6 +309,7 @@
             </ol>
         </div>
     </header>
+<script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
 <script src="script.js"></script>
   <footer class="site-footer">
   <p><a href="https://www.goinvo.com/">&copy; GoInvo</a> Open source under Creative Commons Attribution v4.</p>

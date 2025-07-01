@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 */
+
+/*
 document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.getElementById('bubble-toggle');
   const bubble = document.getElementById('speech-bubble');
@@ -37,7 +39,62 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
     }
   });
+  */
 
+  // 3D Megaphone rendering
+  const canvas = document.getElementById('megaphone3d');
+  if (canvas) {
+    // Scene setup
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 48/32, 0.1, 1000);
+    camera.position.set(0, 0, 32);
+
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setClearColor(0x000000, 0); // transparent
+
+    // Megaphone body (cylinder)
+    const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 32);
+    const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 80 });
+    const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+    body.position.set(-4, 0, 0);
+    body.rotation.z = Math.PI / 2;
+    scene.add(body);
+
+    // Megaphone horn (cone)
+    const hornGeometry = new THREE.ConeGeometry(4, 12, 32, 1, true);
+    const hornMaterial = new THREE.MeshPhongMaterial({ color: 0xe0e0e0, shininess: 100, side: THREE.DoubleSide });
+    const horn = new THREE.Mesh(hornGeometry, hornMaterial);
+    horn.position.set(4, 0, 0);
+    horn.rotation.z = Math.PI / 2;
+    scene.add(horn);
+
+    // Handle (small cylinder)
+    const handleGeometry = new THREE.CylinderGeometry(0.7, 0.7, 5, 16);
+    const handleMaterial = new THREE.MeshPhongMaterial({ color: 0x888888, shininess: 60 });
+    const handle = new THREE.Mesh(handleGeometry, handleMaterial);
+    handle.position.set(-4, -2.5, 0);
+    handle.rotation.x = Math.PI / 6;
+    scene.add(handle);
+
+    // Lighting
+    const light = new THREE.PointLight(0xffffff, 1.2, 100);
+    light.position.set(10, 10, 20);
+    scene.add(light);
+    const ambient = new THREE.AmbientLight(0x888888);
+    scene.add(ambient);
+
+    // Animation
+    function animate() {
+      horn.rotation.y += 0.01;
+      body.rotation.y += 0.01;
+      handle.rotation.y += 0.01;
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
+
+  // Toggle CTA bubble on 3D megaphone click
   const megaphone = document.getElementById('megaphone-toggle');
   const ctaBubble = document.getElementById('cta-bubble');
   if (megaphone && ctaBubble) {
@@ -51,5 +108,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
+
 
