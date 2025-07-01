@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animation
     function animate() {
-      horn.rotation.y += 0.01;
+      /*horn.rotation.y += 0.01;
       body.rotation.y += 0.01;
-      handle.rotation.y += 0.01;
+      handle.rotation.y += 0.01;*/
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     }
