@@ -94,6 +94,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const ambient = new THREE.AmbientLight(0x888888);
     scene.add(ambient);
 
+    // Make the light cast shadow
+    light.castShadow = true;
+    light.shadow.mapSize.width = 128;
+    light.shadow.mapSize.height = 128;
+
+    // Make megaphone parts cast shadow
+    body.castShadow = true;
+    horn.castShadow = true;
+    handle.castShadow = true;
+
     // Add a shadow-receiving plane below the megaphone
     const planeGeometry = new THREE.PlaneGeometry(30, 12);
     const planeMaterial = new THREE.ShadowMaterial({ opacity: 0.25 });
