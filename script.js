@@ -47,10 +47,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, 48/32, 0.1, 1000);
-    camera.position.set(0, 0, 32);
+    camera.position.set(12, 8, 28);
+    camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
     renderer.setClearColor(0x000000, 0); // transparent
+
+    // Enable shadows
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     // Megaphone body (cylinder)
     const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 32);
@@ -58,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
     body.position.set(-4, 0, 0);
     body.rotation.z = Math.PI / 2;
+    body.castShadow = true; // Cast shadow
     scene.add(body);
 
     // Megaphone horn (cone)
@@ -66,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const horn = new THREE.Mesh(hornGeometry, hornMaterial);
     horn.position.set(4, 0, 0);
     horn.rotation.z = Math.PI / 2;
+    horn.castShadow = true; // Cast shadow
     scene.add(horn);
 
     // Handle (small cylinder)
@@ -74,14 +81,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const handle = new THREE.Mesh(handleGeometry, handleMaterial);
     handle.position.set(-4, -2.5, 0);
     handle.rotation.x = Math.PI / 6;
+    handle.castShadow = true; // Cast shadow
     scene.add(handle);
 
     // Lighting
     const light = new THREE.PointLight(0xffffff, 1.2, 100);
     light.position.set(10, 10, 20);
+    light.castShadow = true; // Cast shadow
+    light.shadow.mapSize.width = 128;
+    light.shadow.mapSize.height = 128;
     scene.add(light);
     const ambient = new THREE.AmbientLight(0x888888);
     scene.add(ambient);
+
+    // Add a shadow-receiving plane below the megaphone
+    const planeGeometry = new THREE.PlaneGeometry(30, 12);
+    const planeMaterial = new THREE.ShadowMaterial({ opacity: 0.25 });
+    const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    plane.position.set(0, -6, 0);
+    plane.rotation.x = -Math.PI / 2;
+    plane.receiveShadow = true;
+    scene.add(plane);
 
     // Animation
     function animate() {
