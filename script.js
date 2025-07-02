@@ -44,24 +44,31 @@ document.addEventListener('DOMContentLoaded', function() {
   // 3D Megaphone rendering
   const canvas = document.getElementById('megaphone3d');
   if (canvas) {
+    // Increase canvas resolution for sharper rendering
+    const devicePixelRatio = window.devicePixelRatio || 1;
+    canvas.width = 48 * devicePixelRatio;
+    canvas.height = 32 * devicePixelRatio;
+    canvas.style.width = "1.2em";
+    canvas.style.height = "1.2em";
+
     // Scene setup
     const scene = new THREE.Scene();
-    // Adjust camera for a mostly side profile with a slight turn to show a bit of the front
-    // Side profile would be (x, y, z) = (0, 0, distance), but we want a slight turn, so x is small, z is large
-    const camera = new THREE.PerspectiveCamera(45, 48/32, 0.1, 1000);
-    camera.position.set(0, 4, 28); // x=6 gives a slight turn, z=28 is mostly side
+    // Direct side profile
+    const camera = new THREE.PerspectiveCamera(45, (48/32), 0.1, 1000);
+    camera.position.set(0, 4, 28);
     camera.lookAt(0, 0, 0);
 
-    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true, preserveDrawingBuffer: true });
     renderer.setClearColor(0x000000, 0); // transparent
+    renderer.setPixelRatio(devicePixelRatio); // Sharper rendering
 
     // Enable shadows
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     // Megaphone body (cylinder)
-    const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 32);
-    const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 80 });
+    const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 64); // More segments for smoothness
+    const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 120 });
     const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
     body.position.set(-4, 0, 0);
     body.rotation.z = Math.PI / 2;
@@ -69,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     scene.add(body);
 
     // Megaphone horn (cone)
-    const hornGeometry = new THREE.ConeGeometry(4, 12, 32, 1, true);
-    const hornMaterial = new THREE.MeshPhongMaterial({ color: 0xe0e0e0, shininess: 100, side: THREE.DoubleSide });
+    const hornGeometry = new THREE.ConeGeometry(4, 12, 64, 1, true); // More segments for smoothness
+    const hornMaterial = new THREE.MeshPhongMaterial({ color: 0xe0e0e0, shininess: 150, side: THREE.DoubleSide });
     const horn = new THREE.Mesh(hornGeometry, hornMaterial);
     horn.position.set(4, 0, 0);
     horn.rotation.z = Math.PI / 2;
@@ -78,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
     scene.add(horn);
 
     // Handle (small cylinder)
-    const handleGeometry = new THREE.CylinderGeometry(0.7, 0.7, 5, 16);
-    const handleMaterial = new THREE.MeshPhongMaterial({ color: 0x888888, shininess: 60 });
+    const handleGeometry = new THREE.CylinderGeometry(0.7, 0.7, 5, 32); // More segments for smoothness
+    const handleMaterial = new THREE.MeshPhongMaterial({ color: 0x888888, shininess: 80 });
     const handle = new THREE.Mesh(handleGeometry, handleMaterial);
     handle.position.set(-4, -2.5, 0);
     handle.rotation.x = Math.PI / 6;
@@ -87,18 +94,18 @@ document.addEventListener('DOMContentLoaded', function() {
     scene.add(handle);
 
     // Lighting
-    const light = new THREE.PointLight(0xffffff, 1.2, 100);
+    const light = new THREE.PointLight(0xffffff, 1.4, 100);
     light.position.set(10, 10, 20);
     light.castShadow = true;
-    light.shadow.mapSize.width = 128;
-    light.shadow.mapSize.height = 128;
+    light.shadow.mapSize.width = 256;
+    light.shadow.mapSize.height = 256;
     scene.add(light);
-    const ambient = new THREE.AmbientLight(0x888888);
+    const ambient = new THREE.AmbientLight(0xaaaaaa, 0.7);
     scene.add(ambient);
 
     // Add a shadow-receiving plane below the megaphone
     const planeGeometry = new THREE.PlaneGeometry(30, 12);
-    const planeMaterial = new THREE.ShadowMaterial({ opacity: 0.25 });
+    const planeMaterial = new THREE.ShadowMaterial({ opacity: 0.22 });
     const plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.position.set(0, -6, 0);
     plane.rotation.x = -Math.PI / 2;
