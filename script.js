@@ -46,8 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
   if (canvas) {
     // Scene setup
     const scene = new THREE.Scene();
+    // Adjust camera for a mostly side profile with a slight turn to show a bit of the front
+    // Side profile would be (x, y, z) = (0, 0, distance), but we want a slight turn, so x is small, z is large
     const camera = new THREE.PerspectiveCamera(45, 48/32, 0.1, 1000);
-    camera.position.set(12, 8, 28);
+    camera.position.set(6, 4, 28); // x=6 gives a slight turn, z=28 is mostly side
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
@@ -63,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
     body.position.set(-4, 0, 0);
     body.rotation.z = Math.PI / 2;
-    body.castShadow = true; // Cast shadow
+    body.castShadow = true;
     scene.add(body);
 
     // Megaphone horn (cone)
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const horn = new THREE.Mesh(hornGeometry, hornMaterial);
     horn.position.set(4, 0, 0);
     horn.rotation.z = Math.PI / 2;
-    horn.castShadow = true; // Cast shadow
+    horn.castShadow = true;
     scene.add(horn);
 
     // Handle (small cylinder)
@@ -81,28 +83,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const handle = new THREE.Mesh(handleGeometry, handleMaterial);
     handle.position.set(-4, -2.5, 0);
     handle.rotation.x = Math.PI / 6;
-    handle.castShadow = true; // Cast shadow
+    handle.castShadow = true;
     scene.add(handle);
 
     // Lighting
     const light = new THREE.PointLight(0xffffff, 1.2, 100);
     light.position.set(10, 10, 20);
-    light.castShadow = true; // Cast shadow
+    light.castShadow = true;
     light.shadow.mapSize.width = 128;
     light.shadow.mapSize.height = 128;
     scene.add(light);
     const ambient = new THREE.AmbientLight(0x888888);
     scene.add(ambient);
-
-    // Make the light cast shadow
-    light.castShadow = true;
-    light.shadow.mapSize.width = 128;
-    light.shadow.mapSize.height = 128;
-
-    // Make megaphone parts cast shadow
-    body.castShadow = true;
-    horn.castShadow = true;
-    handle.castShadow = true;
 
     // Add a shadow-receiving plane below the megaphone
     const planeGeometry = new THREE.PlaneGeometry(30, 12);
@@ -115,9 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animation
     function animate() {
-      /*horn.rotation.y += 0.01;
-      body.rotation.y += 0.01;
-      handle.rotation.y += 0.01;*/
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     }
