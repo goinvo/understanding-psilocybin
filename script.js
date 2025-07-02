@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adjust camera for a mostly side profile with a slight turn to show a bit of the front
     // Side profile would be (x, y, z) = (0, 0, distance), but we want a slight turn, so x is small, z is large
     const camera = new THREE.PerspectiveCamera(45, 48/32, 0.1, 1000);
-    camera.position.set(6, 4, 28); // x=6 gives a slight turn, z=28 is mostly side
+    camera.position.set(0, 4, 28); // x=6 gives a slight turn, z=28 is mostly side
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
