@@ -597,6 +597,6 @@ from {
   font-family: 'Asap Condensed', sans-serif;
   font-size: 1.1rem;
   color: #09090b;
-  z-index: 110;
+  z-index: 9999; /* <--- Make sure this is high */
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
