@@ -46,28 +46,30 @@ document.addEventListener('DOMContentLoaded', function() {
   if (canvas) {
     // Increase canvas resolution for sharper rendering
     const devicePixelRatio = window.devicePixelRatio || 1;
-    canvas.width = 48 * devicePixelRatio;
-    canvas.height = 32 * devicePixelRatio;
-    canvas.style.width = "1.2em";
-    canvas.style.height = "1.2em";
+    const width = 48;
+    const height = 32;
+    canvas.width = width * devicePixelRatio;
+    canvas.height = height * devicePixelRatio;
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
 
     // Scene setup
     const scene = new THREE.Scene();
-    // Direct side profile
-    const camera = new THREE.PerspectiveCamera(45, (48/32), 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
     camera.position.set(0, 4, 28);
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true, preserveDrawingBuffer: true });
     renderer.setClearColor(0x000000, 0); // transparent
     renderer.setPixelRatio(devicePixelRatio); // Sharper rendering
+    renderer.setSize(width * devicePixelRatio, height * devicePixelRatio, false);
 
     // Enable shadows
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     // Megaphone body (cylinder) with rounded ends
-    const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 64);
+    const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 128); // Increased segments
     const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 120 });
     const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
     body.position.set(-4, 0, 0);
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scene.add(body);
 
     // Add hemispheres to round the ends of the body
-    const capGeometry = new THREE.SphereGeometry(2, 48, 32, 0, Math.PI * 2, 0, Math.PI / 2);
+    const capGeometry = new THREE.SphereGeometry(2, 96, 64, 0, Math.PI * 2, 0, Math.PI / 2); // Increased segments
     const capMaterial = bodyMaterial;
 
     // Back cap
