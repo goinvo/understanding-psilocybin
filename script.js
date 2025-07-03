@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Combine all parts into a single megaphone group
     const megaphoneGroup = new THREE.Group();
     megaphoneGroup.add(body, capBack, capFront, horn, hornLip, handle);
-    megaphoneGroup.scale.set(0.5, 0.5, 0.5); // Increase or decrease all dimensions
+    megaphoneGroup.scale.set(0.75, 0.75, 0.75); // Increase or decrease all dimensions
     scene.add(megaphoneGroup);
 
     // Lighting
