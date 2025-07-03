@@ -86,24 +86,17 @@ document.addEventListener('DOMContentLoaded', function() {
     capBack.rotation.x = Math.PI;
     capBack.castShadow = true;
     scene.add(capBack);
-    // Front cap
-    const capFront = new THREE.Mesh(capGeometry, capMaterial);
-    capFront.position.set(0, 0, 0);
-    capFront.rotation.z = Math.PI / 2;
-    capFront.castShadow = true;
-    scene.add(capFront);
-
     // --- Megaphone body with gradual transition to horn ---
 
-    // Remove the front cap (capFront) so the body is open toward the horn
-    // (Do not add capFront after the body)
+    // Do NOT add the front cap (capFront) so the body is open toward the horn
 
     // Create a "transition" geometry between the body and horn using a truncated cone (CylinderGeometry)
     // This will smoothly connect the body (radius 2) to the horn (radius 4)
-    const transitionGeometry = new THREE.CylinderGeometry(2, 4, 1.5, 64, 1, false);
+    const transitionLength = 2.2; // Slightly longer for a smoother blend
+    const transitionGeometry = new THREE.CylinderGeometry(2, 4, transitionLength, 64, 1, true);
     const transitionMaterial = new THREE.MeshPhongMaterial({ color: 0xf5f5f5, shininess: 170 });
     const transition = new THREE.Mesh(transitionGeometry, transitionMaterial);
-    transition.position.set(1, 0, 0); // Place between body and horn
+    transition.position.set(transitionLength / 2, 0, 0); // Place between body and horn
     transition.rotation.z = Math.PI / 2;
     transition.castShadow = true;
     scene.add(transition);
@@ -111,8 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Megaphone horn (cone)
     const hornGeometry = new THREE.ConeGeometry(4, 12, 128, 1, true);
     const hornMaterial = new THREE.MeshPhongMaterial({ color: 0xe0e0e0, shininess: 180, side: THREE.DoubleSide });
+    hornGeometry.translate(0, 6, 0); // Move cone so base is at y=0
     const horn = new THREE.Mesh(hornGeometry, hornMaterial);
-    horn.position.set(4 + 1.5/2, 0, 0); // Shift horn forward by half the transition length
+    horn.position.set(transitionLength + 4, 0, 0); // Shift horn forward to meet transition
     horn.rotation.z = Math.PI / 2;
     horn.castShadow = true;
     scene.add(horn);
@@ -120,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add a torus at the mouth of the horn for a rounded lip
     const lipGeometry = new THREE.TorusGeometry(4, 0.32, 32, 64);
     const hornLip = new THREE.Mesh(lipGeometry, hornMaterial);
-    hornLip.position.set(10 + 1.5/2, 0, 0); // Shift lip forward to match horn
+    hornLip.position.set(transitionLength + 10, 0, 0); // Shift lip forward to match horn
     hornLip.rotation.y = Math.PI / 2;
     hornLip.castShadow = true;
     scene.add(hornLip);
