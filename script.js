@@ -95,8 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
     capFront.castShadow = true;
     scene.add(capFront);
 
-    // Megaphone horn (cone) with rounded edge at the mouth
-    const hornGeometry = new THREE.ConeGeometry(4, 12, 64, 1, true);
+    // Megaphone horn (truncated cone) with rounded edge at the mouth
+    // Use CylinderGeometry for a truncated cone: CylinderGeometry(topRadius, bottomRadius, height, radialSegments, heightSegments, openEnded)
+    const hornGeometry = new THREE.CylinderGeometry(1.2, 4, 12, 64, 1, true); // small end radius 1.2, large end radius 4
     const hornMaterial = new THREE.MeshPhongMaterial({ color: 0xe0e0e0, shininess: 150, side: THREE.DoubleSide });
     const horn = new THREE.Mesh(hornGeometry, hornMaterial);
     horn.position.set(4, 0, 0);
