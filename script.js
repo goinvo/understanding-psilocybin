@@ -46,30 +46,28 @@ document.addEventListener('DOMContentLoaded', function() {
   if (canvas) {
     // Increase canvas resolution for sharper rendering
     const devicePixelRatio = window.devicePixelRatio || 1;
-    const width = 48;
-    const height = 32;
-    canvas.width = width * devicePixelRatio;
-    canvas.height = height * devicePixelRatio;
-    canvas.style.width = width + "px";
-    canvas.style.height = height + "px";
+    canvas.width = 48 * devicePixelRatio;
+    canvas.height = 32 * devicePixelRatio;
+    canvas.style.width = "1.2em";
+    canvas.style.height = "1.2em";
 
     // Scene setup
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+    // Direct side profile
+    const camera = new THREE.PerspectiveCamera(45, (48/32), 0.1, 1000);
     camera.position.set(0, 4, 28);
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true, preserveDrawingBuffer: true });
     renderer.setClearColor(0x000000, 0); // transparent
     renderer.setPixelRatio(devicePixelRatio); // Sharper rendering
-    renderer.setSize(width * devicePixelRatio, height * devicePixelRatio, false);
 
     // Enable shadows
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-    // Megaphone body (cylinder) with rounded ends
-    const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 128); // Increased segments
+    // Megaphone body (cylinder)
+    const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 64); // More segments for smoothness
     const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 120 });
     const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
     body.position.set(-4, 0, 0);
@@ -77,27 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
     body.castShadow = true;
     scene.add(body);
 
-    // Add hemispheres to round the ends of the body
-    const capGeometry = new THREE.SphereGeometry(2, 96, 64, 0, Math.PI * 2, 0, Math.PI / 2); // Increased segments
-    const capMaterial = bodyMaterial;
-
-    // Back cap
-    const capBack = new THREE.Mesh(capGeometry, capMaterial);
-    capBack.position.set(-8, 0, 0);
-    capBack.rotation.z = Math.PI / 2;
-    capBack.rotation.x = Math.PI;
-    capBack.castShadow = true;
-    scene.add(capBack);
-
-    // Front cap (where horn meets body)
-    const capFront = new THREE.Mesh(capGeometry, capMaterial);
-    capFront.position.set(0, 0, 0);
-    capFront.rotation.z = Math.PI / 2;
-    capFront.castShadow = true;
-    scene.add(capFront);
-
-    // Megaphone horn (cone) with rounded edge at the mouth
-    const hornGeometry = new THREE.ConeGeometry(4, 12, 64, 1, true);
+    // Megaphone horn (cone)
+    const hornGeometry = new THREE.ConeGeometry(4, 12, 64, 1, true); // More segments for smoothness
     const hornMaterial = new THREE.MeshPhongMaterial({ color: 0xe0e0e0, shininess: 150, side: THREE.DoubleSide });
     const horn = new THREE.Mesh(hornGeometry, hornMaterial);
     horn.position.set(4, 0, 0);
@@ -105,17 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
     horn.castShadow = true;
     scene.add(horn);
 
-    // Add a torus at the mouth of the horn for a rounded lip
-    const lipGeometry = new THREE.TorusGeometry(4, 0.35, 24, 48);
-    const lipMaterial = hornMaterial;
-    const hornLip = new THREE.Mesh(lipGeometry, lipMaterial);
-    hornLip.position.set(10, 0, 0);
-    hornLip.rotation.y = Math.PI / 2;
-    hornLip.castShadow = true;
-    scene.add(hornLip);
-
     // Handle (small cylinder)
-    const handleGeometry = new THREE.CylinderGeometry(0.7, 0.7, 5, 32);
+    const handleGeometry = new THREE.CylinderGeometry(0.7, 0.7, 5, 32); // More segments for smoothness
     const handleMaterial = new THREE.MeshPhongMaterial({ color: 0x888888, shininess: 80 });
     const handle = new THREE.Mesh(handleGeometry, handleMaterial);
     handle.position.set(-4, -2.5, 0);
