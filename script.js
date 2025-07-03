@@ -96,35 +96,6 @@ if (canvas) {
   const ambient = new THREE.AmbientLight(0xaaaaaa, 0.8);
   scene.add(ambient);
 
-  // Remove the shadow-receiving plane (delete or comment out these lines)
-  // const planeGeometry = new THREE.PlaneGeometry(30, 12);
-  // const planeMaterial = new THREE.ShadowMaterial({ opacity: 0.22 });
-  // const plane = new THREE.Mesh(planeGeometry, planeMaterial);
-  // plane.position.set(0, -6, 0);
-  // plane.rotation.x = -Math.PI / 2;
-  // plane.receiveShadow = true;
-  // scene.add(plane);
-
-  // Add a generic elliptical drop shadow using 2D canvas
-  function drawDropShadow() {
-    const ctx = canvas.getContext('2d');
-    ctx.save();
-    // Clear only the area where the shadow will be drawn (bottom part)
-    ctx.clearRect(0, canvas.height * 0.7, canvas.width, canvas.height * 0.3);
-    // Draw ellipse (shadow)
-    ctx.globalAlpha = 0.28;
-    ctx.fillStyle = "#222";
-    // Position and size: adjust as needed for your megaphone scale
-    const cx = canvas.width * 0.52;
-    const cy = canvas.height * 0.82;
-    const rx = canvas.width * 0.28;
-    const ry = canvas.height * 0.10;
-    ctx.beginPath();
-    ctx.ellipse(cx, cy, rx, ry, 0, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.globalAlpha = 1.0;
-    ctx.restore();
-  }
 
   // Animation
   function animate() {
