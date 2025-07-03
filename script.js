@@ -123,6 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
     handle.castShadow = true;
     scene.add(handle);
 
+    // Combine all parts into a single megaphone group
+    const megaphoneGroup = new THREE.Group();
+    megaphoneGroup.add(body, capBack, capFront, horn, hornLip, handle);
+    megaphoneGroup.scale.set(1.5, 1.5, 1.5); // Increase or decrease all dimensions
+    scene.add(megaphoneGroup);
+
     // Lighting
     const light = new THREE.PointLight(0xffffff, 1.6, 100);
     light.position.set(10, 10, 20);
