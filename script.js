@@ -97,15 +97,6 @@ if (canvas) {
   scene.add(ambient);
 
 
-  // Animation
-  function animate() {
-    renderer.render(scene, camera);
-    drawDropShadow();
-    requestAnimationFrame(animate);
-  }
-  animate();
-}
-
 document.addEventListener('DOMContentLoaded', function () {
   const megaphone = document.getElementById('megaphone-toggle');
   const ctaBubble = document.getElementById('cta-bubble');
