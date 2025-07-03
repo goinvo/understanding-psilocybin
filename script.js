@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 */
 
-/*
+
 document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.getElementById('bubble-toggle');
   const bubble = document.getElementById('speech-bubble');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
     }
   });
-  */
+  
 
   // 3D Megaphone rendering
   const canvas = document.getElementById('megaphone3d');
