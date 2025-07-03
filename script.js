@@ -140,13 +140,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const ctaBubble = document.getElementById('cta-bubble');
 
   if (megaphone && ctaBubble) {
-    // Show bubble on click
+    // Only the megaphone toggles the bubble
     megaphone.addEventListener('click', function (e) {
       e.stopPropagation();
-      ctaBubble.hidden = false;
+      ctaBubble.hidden = !ctaBubble.hidden;
     });
 
-    // Hide bubble when clicking outside
+    // Hide bubble when clicking outside the bubble or megaphone
     document.addEventListener('click', function (e) {
       if (!ctaBubble.hidden && !megaphone.contains(e.target) && !ctaBubble.contains(e.target)) {
         ctaBubble.hidden = true;
