@@ -552,7 +552,7 @@ from {
 .megaphone-toggle {
   display: inline-block;
   vertical-align: middle; /* or try: -0.3em, -0.4em, etc. */
-  margin-left: 0.1em;     /* reduce if you want it closer horizontally */
+  margin-left: 0;     /* reduce if you want it closer horizontally */
   margin-bottom: -0.2em;  /* negative value pulls it down closer to text */
 }
 
