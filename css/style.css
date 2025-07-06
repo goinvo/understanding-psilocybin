@@ -559,7 +559,7 @@ from {
 }
 
 .megaphone-wave {
-  stroke: #000;
+  stroke: #09090b;
   stroke-width: 2.5;
   fill: none;
   opacity: 0.8;
@@ -582,7 +582,7 @@ from {
   min-width: 220px;
   max-width: 320px;
   background: #fff;
-  border: 2px solid #0000;
+  border: 2px solid #09090b;
   border-radius: 1.5em;
   box-shadow: 2px 4px 16px rgba(0,0,0,0.08);
   padding: 1em 1.5em;
@@ -605,7 +605,7 @@ from {
   border-top: 14px solid transparent;
   border-bottom: 0 solid transparent;
   border-right: 18px solid #fff;
-  filter: drop-shadow(-2px 2px 0 #000);
+  filter: drop-shadow(-2px 2px 0 #09090b);
   z-index: 1;
 }
 
