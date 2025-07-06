@@ -596,17 +596,27 @@ from {
 .cta-bubble::before {
   content: "";
   position: absolute;
-  left: -18px; /* Move closer to the left edge */
-  bottom: 12px; /* Distance from the bottom of the bubble */
-  top: auto;
-  transform: none;
+  left: -20px; /* Slightly more negative to overlap the border */
+  bottom: 10px; /* Adjust as needed for vertical alignment */
   width: 0;
   height: 0;
   border-top: 14px solid transparent;
   border-bottom: 0 solid transparent;
-  border-right: 18px solid #fff;
-  filter: drop-shadow(-2px 2px 0 #09090b);
+  border-right: 20px solid #09090b; /* Border color */
   z-index: 1;
+}
+
+.cta-bubble::after {
+  content: "";
+  position: absolute;
+  left: -18px; /* Slightly less negative to sit on top of ::before */
+  bottom: 12px; /* Should be slightly higher than ::before */
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-right: 18px solid #fff; /* Bubble background */
+  z-index: 2;
 }
 
 #megaphone3d {
