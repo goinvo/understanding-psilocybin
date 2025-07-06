@@ -593,29 +593,31 @@ from {
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
 
+/* Border tail */
 .cta-bubble::before {
   content: "";
   position: absolute;
-  left: -20px; /* Slightly more negative to overlap the border */
-  bottom: 10px; /* Adjust as needed for vertical alignment */
+  left: -18px;
+  bottom: 10px;
   width: 0;
   height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 0 solid transparent;
-  border-right: 20px solid #09090b; /* Border color */
+  border-width: 16px 20px 0 0;
+  border-style: solid;
+  border-color: #09090b transparent transparent transparent;
   z-index: 1;
 }
 
+/* Fill tail */
 .cta-bubble::after {
   content: "";
   position: absolute;
-  left: -18px; /* Slightly less negative to sit on top of ::before */
-  bottom: 12px; /* Should be slightly higher than ::before */
+  left: -15px;
+  bottom: 12px;
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 0 solid transparent;
-  border-right: 18px solid #fff; /* Bubble background */
+  border-width: 13px 17px 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
   z-index: 2;
 }
 
