@@ -16,7 +16,8 @@ body {
     }
 
 .header-inline {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   position: relative;
   vertical-align: middle;
   line-height: 1.2;
@@ -589,9 +590,8 @@ from {
 
 /* CTA bubble styling */
 .cta-bubble {
-  position: absolute;
-  left: calc(100% + 16px);
-  bottom: 0;
+  position: static;
+  margin-left: 0.75em;
   min-width: 220px;
   max-width: 320px;
   background: #fff;
@@ -602,7 +602,7 @@ from {
   font-family: 'Asap Condensed', sans-serif;
   font-size: 1.1rem;
   color: #09090b;
-  z-index: 9999; /* <--- Make sure this is high */
+  z-index: 9999;
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
 
