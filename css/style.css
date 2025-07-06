@@ -18,6 +18,8 @@ body {
 .header-inline {
   display: inline-block;
   position: relative;
+  vertical-align: middle;
+  line-height: 1.2;
 }
 
 .main-title {
@@ -551,12 +553,15 @@ from {
 
 .megaphone-toggle {
   display: inline-block;
-  vertical-align: middle; /* or try: -0.3em, -0.4em, etc. */
-  margin-left: 0;     /* reduce if you want it closer horizontally */
-  margin-bottom: -0.2em;  /* negative value pulls it down closer to text */
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+  min-width: 1.2em;
+  min-height: 1.2em;
   position: relative;
   z-index: 120;
   cursor: pointer;
+  overflow: visible;
 }
 
 .megaphone-toggle svg {
