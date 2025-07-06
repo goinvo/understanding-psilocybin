@@ -605,3 +605,11 @@ from {
   z-index: 9999; /* <--- Make sure this is high */
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
+
+#megaphone3d {
+  background: #eee;
+  border: 1px solid red;
+  display: block;
+  width: 1.2em !important;
+  height: 1.2em !important;
+}
