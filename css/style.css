@@ -607,8 +607,6 @@ from {
 }
 
 #megaphone3d {
-  background: #eee;
-  border: 1px solid red;
   display: block;
   width: 1.2em !important;
   height: 1.2em !important;
