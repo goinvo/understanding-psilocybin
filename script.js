@@ -96,6 +96,8 @@ if (canvas) {
   const ambient = new THREE.AmbientLight(0xaaaaaa, 0.8);
   scene.add(ambient);
 
+  // After scene setup and adding all objects
+  renderer.render(scene, camera);
 
 document.addEventListener('DOMContentLoaded', function () {
   const megaphone = document.getElementById('megaphone-toggle');
