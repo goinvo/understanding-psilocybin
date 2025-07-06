@@ -596,15 +596,16 @@ from {
 .cta-bubble::before {
   content: "";
   position: absolute;
-  left: -22px; /* Adjust to match margin-left and border */
-  top: 50%;
-  transform: translateY(-50%);
+  left: -18px; /* Move closer to the left edge */
+  bottom: 12px; /* Distance from the bottom of the bubble */
+  top: auto;
+  transform: none;
   width: 0;
   height: 0;
   border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-right: 22px solid #fff;
-  filter: drop-shadow(-2px 0 0 #0000);
+  border-bottom: 0 solid transparent;
+  border-right: 18px solid #fff;
+  filter: drop-shadow(-2px 2px 0 #ec9887);
   z-index: 1;
 }
 
