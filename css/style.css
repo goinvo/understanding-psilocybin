@@ -97,7 +97,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 200px repeat(5, 100px);
-    grid-template-rows: repeat(9, 100px);
+    grid-template-rows: repeat(10, 100px);
     gap: 5px;
     }
         
