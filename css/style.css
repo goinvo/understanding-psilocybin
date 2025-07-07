@@ -19,8 +19,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  vertical-align: middle;
-  line-height: 1.2;
 }
 
 .main-title {
@@ -577,10 +575,11 @@ from {
 
 /* CTA bubble styling */
 .cta-bubble {
-  position: relative;
-  margin-left: 0.75em;
+  position: absolute;
+  left: 2.5em;
   height: 50px;
   width: 600px;
+  top: 50%;
   background: #fff;
   border: 2px solid #09090b;
   border-radius: 1.5em;
@@ -589,6 +588,7 @@ from {
   font-family: 'Asap Condensed', sans-serif;
   font-size: 1.1rem;
   color: #09090b;
+  transform: translateY(-50%);
   z-index: 9999;
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
