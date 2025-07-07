@@ -612,3 +612,16 @@ from {
   width: 1.2em !important;
   height: 1.2em !important;
 }
+
+.description-cell {
+  background: #f8f8f8;
+  border-radius: 0 0 1em 1em;
+  font-size: 1rem;
+  color: #444;
+  padding: 0.75em 1.5em;
+  transition: all 0.3s;
+  animation: fadeIn 0.3s;
+}
+.description-text {
+  margin: 0;
+}
