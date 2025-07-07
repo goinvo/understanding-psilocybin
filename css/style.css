@@ -579,8 +579,8 @@ from {
 .cta-bubble {
   position: relative;
   margin-left: 0.75em;
-  height: 100px;
-  width: 500px;
+  height: 50px;
+  width: 600px;
   background: #fff;
   border: 2px solid #09090b;
   border-radius: 1.5em;
