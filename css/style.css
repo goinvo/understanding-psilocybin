@@ -576,7 +576,7 @@ from {
 /* CTA bubble styling */
 .cta-bubble {
   position: absolute;
-  left: 800px;
+  left: 550px;
   height: 50px;
   width: 600px;
   top: 50%;
@@ -588,7 +588,7 @@ from {
   font-family: 'Asap Condensed', sans-serif;
   font-size: 1.1rem;
   color: #09090b;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
   z-index: 9999;
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
