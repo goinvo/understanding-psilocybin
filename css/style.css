@@ -593,32 +593,20 @@ from {
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
 
-/* Border tail */
-.cta-bubble::before {
-  content: "";
-  position: absolute;
-  left: -18px;
-  bottom: 10px;
-  width: 0;
-  height: 0;
-  border-width: 0 0 16px 20px;
-  border-style: solid;
-  border-color: transparent transparent #09090b transparent;
-  z-index: 1;
-}
-
-/* Fill tail */
+/* Single tail, part of the bubble */
 .cta-bubble::after {
   content: "";
   position: absolute;
-  left: -15px;
-  bottom: 12px;
+  left: -22px;      /* Adjust to align with bubble border */
+  bottom: 18px;     /* Adjust to align with bubble's bottom curve */
   width: 0;
   height: 0;
-  border-width: 0 0 13px 17px;
-  border-style: solid;
-  border-color: transparent transparent #fff transparent;
-  z-index: 2;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 22px solid #fff;      /* Bubble background */
+  border-radius: 0 0 0 12px;
+  box-shadow: -2px 0 0 0 #09090b;     /* Bubble border */
+  z-index: 1;
 }
 
 #megaphone3d {
