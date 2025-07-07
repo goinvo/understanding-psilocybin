@@ -597,16 +597,14 @@ from {
 .cta-bubble::after {
   content: "";
   position: absolute;
-  left: -22px;      /* Adjust to align with bubble border */
-  bottom: 18px;     /* Adjust to align with bubble's bottom curve */
-  width: 0;
-  height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-right: 22px solid #fff;      /* Bubble background */
-  border-radius: 0 0 0 12px;
-  box-shadow: -2px 0 0 0 #09090b;     /* Bubble border */
-  z-index: 1;
+  left: -18px;         /* Adjust to connect with bubble border */
+  bottom: 26px;        /* Adjust to align with bubble's bottom curve */
+  width: 22px;         /* Length of the tail */
+  height: 2px;         /* Thickness of the tail */
+  background: #09090b; /* Same as bubble border */
+  border-radius: 2px;
+  transform: rotate(-25deg); /* Angle the line toward the megaphone */
+  z-index: 2;
 }
 
 #megaphone3d {
