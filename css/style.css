@@ -576,7 +576,7 @@ from {
 /* CTA bubble styling */
 .cta-bubble {
   position: absolute;
-  left: 2.5em;
+  left: -11px;
   height: 50px;
   width: 600px;
   top: 50%;
