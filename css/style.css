@@ -597,7 +597,7 @@ from {
 .cta-bubble::after {
   content: "";
   position: absolute;
-  left: -19px; /* Adjust to connect with bubble border */
+  left: -14px; /* Adjust to connect with bubble border */
   bottom: -4px; /* Adjust to align with bubble's bottom curve */
   width: 36px;
   height: 32px;
