@@ -134,14 +134,23 @@ document.addEventListener('DOMContentLoaded', function () {
   // Toggle description for Deprioritization/Decriminalization
   const depriorLabel = document.getElementById('deprior-label');
   const depriorDesc = document.getElementById('deprior-desc');
+  // Select the next 5 sibling cells after the description cell
+  const depriorEmptyCells = [];
+  if (depriorDesc) {
+    let next = depriorDesc.nextElementSibling;
+    for (let i = 0; i < 5; i++) {
+      if (next && next.classList.contains('cell')) {
+        depriorEmptyCells.push(next);
+        next = next.nextElementSibling;
+      }
+    }
+  }
   if (depriorLabel && depriorDesc) {
     depriorLabel.style.cursor = 'pointer';
     depriorLabel.addEventListener('click', function () {
-      if (depriorDesc.style.display === 'none' || depriorDesc.style.display === '') {
-        depriorDesc.style.display = 'block';
-      } else {
-        depriorDesc.style.display = 'none';
-      }
+      const show = depriorDesc.style.display === 'none' || depriorDesc.style.display === '';
+      depriorDesc.style.display = show ? 'flex' : 'none';
+      depriorEmptyCells.forEach(cell => cell.style.display = show ? 'flex' : 'none');
     });
   }
 });
