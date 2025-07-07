@@ -133,24 +133,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle description for Deprioritization/Decriminalization
   const depriorLabel = document.getElementById('deprior-label');
-  const depriorDesc = document.getElementById('deprior-desc');
-  // Select the next 5 sibling cells after the description cell
-  const depriorEmptyCells = [];
-  if (depriorDesc) {
-    let next = depriorDesc.nextElementSibling;
-    for (let i = 0; i < 5; i++) {
-      if (next && next.classList.contains('cell')) {
-        depriorEmptyCells.push(next);
-        next = next.nextElementSibling;
-      }
-    }
-  }
-  if (depriorLabel && depriorDesc) {
+  const depriorDescCells = document.querySelectorAll('.deprior-desc-row');
+  if (depriorLabel && depriorDescCells.length) {
     depriorLabel.style.cursor = 'pointer';
     depriorLabel.addEventListener('click', function () {
-      const show = depriorDesc.style.display === 'none' || depriorDesc.style.display === '';
-      depriorDesc.style.display = show ? 'flex' : 'none';
-      depriorEmptyCells.forEach(cell => cell.style.display = show ? 'flex' : 'none');
+      const isHidden = depriorDescCells[0].style.display === 'none' || depriorDescCells[0].style.display === '';
+      depriorDescCells.forEach(cell => {
+        cell.style.display = isHidden ? 'flex' : 'none';
+      });
     });
   }
 });
