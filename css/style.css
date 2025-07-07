@@ -622,6 +622,3 @@ from {
   transition: all 0.3s;
   animation: fadeIn 0.3s;
 }
-.description-text {
-  margin: 0;
-}
