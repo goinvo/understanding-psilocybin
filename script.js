@@ -143,6 +143,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  document.querySelectorAll('.label-text[data-desc]').forEach(label => {
+    label.style.cursor = 'pointer';
+    label.addEventListener('click', function () {
+      const key = label.getAttribute('data-desc');
+      const descCells = document.querySelectorAll(`.cell[data-desc="${key}"]`);
+      const isHidden = descCells[0].style.display === 'none' || descCells[0].style.display === '';
+      descCells.forEach(cell => {
+        cell.style.display = isHidden ? 'flex' : 'none';
+      });
+    });
+  });
 });
 
 }
