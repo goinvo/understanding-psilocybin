@@ -130,6 +130,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // Toggle description for Deprioritization/Decriminalization
+  const depriorLabel = document.getElementById('deprior-label');
+  const depriorDesc = document.getElementById('deprior-desc');
+  if (depriorLabel && depriorDesc) {
+    depriorLabel.style.cursor = 'pointer';
+    depriorLabel.addEventListener('click', function () {
+      if (depriorDesc.style.display === 'none' || depriorDesc.style.display === '') {
+        depriorDesc.style.display = 'block';
+      } else {
+        depriorDesc.style.display = 'none';
+      }
+    });
+  }
 });
 
 }
