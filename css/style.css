@@ -597,8 +597,8 @@ from {
 .cta-bubble::after {
   content: "";
   position: absolute;
-  left: -20px; /* Adjust to connect with bubble border */
-  bottom: 2px; /* Adjust to align with bubble's bottom curve */
+  left: -19px; /* Adjust to connect with bubble border */
+  bottom: -1px; /* Adjust to align with bubble's bottom curve */
   width: 36px;
   height: 32px;
   background: url('data:image/svg+xml;utf8,<svg width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34 30 Q10 24 8 16 Q7 10 18 4" fill="white" stroke="black" stroke-width="2"/></svg>') no-repeat center center;
