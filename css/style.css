@@ -601,7 +601,7 @@ from {
   bottom: -4px; /* Adjust to align with bubble's bottom curve */
   width: 36px;
   height: 32px;
-  background: url('data:image/svg+xml;utf8,<svg width="28" height="22" viewBox="0 0 28 22" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M26 21 L6 13 Q2 11 8 2" fill="white" stroke="black" stroke-width="2"/></svg>') no-repeat center center;
+  background: url('data:image/svg+xml;utf8,<svg width="28" height="22" viewBox="0 0 28 22" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M26 21 L10 13 Q2 11 8 2" fill="white" stroke="black" stroke-width="2"/></svg>') no-repeat center center;
   background-size: contain;
   pointer-events: none;
   z-index: 2;
