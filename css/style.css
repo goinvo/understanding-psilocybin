@@ -601,9 +601,9 @@ from {
   bottom: 10px;
   width: 0;
   height: 0;
-  border-width: 16px 20px 0 0;
+  border-width: 0 0 16px 20px;
   border-style: solid;
-  border-color: #09090b transparent transparent transparent;
+  border-color: transparent transparent #09090b transparent;
   z-index: 1;
 }
 
@@ -615,9 +615,9 @@ from {
   bottom: 12px;
   width: 0;
   height: 0;
-  border-width: 13px 17px 0 0;
+  border-width: 0 0 13px 17px;
   border-style: solid;
-  border-color: #fff transparent transparent transparent;
+  border-color: transparent transparent #fff transparent;
   z-index: 2;
 }
 
