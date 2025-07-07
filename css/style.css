@@ -593,17 +593,17 @@ from {
   animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
 }
 
-/* Single tail, part of the bubble */
+/* Curved SVG tail */
 .cta-bubble::after {
   content: "";
   position: absolute;
-  left: -18px;         /* Adjust to connect with bubble border */
-  bottom: 26px;        /* Adjust to align with bubble's bottom curve */
-  width: 22px;         /* Length of the tail */
-  height: 2px;         /* Thickness of the tail */
-  background: #09090b; /* Same as bubble border */
-  border-radius: 2px;
-  transform: rotate(-25deg); /* Angle the line toward the megaphone */
+  left: -32px; /* Adjust to connect with bubble border */
+  bottom: 18px; /* Adjust to align with bubble's bottom curve */
+  width: 36px;
+  height: 32px;
+  background: url('data:image/svg+xml;utf8,<svg width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34 30 Q10 24 8 16 Q7 10 18 4" fill="white" stroke="black" stroke-width="2"/></svg>') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
   z-index: 2;
 }
 
