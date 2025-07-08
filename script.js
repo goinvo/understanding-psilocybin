@@ -133,28 +133,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle description for Deprioritization/Decriminalization
   const depriorLabel = document.getElementById('deprior-label');
-  const depriorDescCells = document.querySelectorAll('.deprior-desc-row');
-  if (depriorLabel && depriorDescCells.length) {
+  if (depriorLabel) {
     depriorLabel.style.cursor = 'pointer';
     depriorLabel.addEventListener('click', function () {
-      const isHidden = depriorDescCells[0].style.display === 'none' || depriorDescCells[0].style.display === '';
-      depriorDescCells.forEach(cell => {
-        cell.style.display = isHidden ? 'flex' : 'none';
-      });
+      const main = depriorLabel.querySelector('.label-main');
+      const desc = depriorLabel.querySelector('.label-desc');
+      if (main && desc) {
+        const isLabel = main.style.display !== 'none';
+        main.style.display = isLabel ? 'none' : '';
+        desc.style.display = isLabel ? '' : 'none';
+      }
     });
   }
 
-  document.querySelectorAll('.label-text[data-desc]').forEach(label => {
-    label.style.cursor = 'pointer';
-    label.addEventListener('click', function () {
-      const key = label.getAttribute('data-desc');
-      const descCells = document.querySelectorAll(`.cell[data-desc="${key}"]`);
-      const isHidden = descCells[0].style.display === 'none' || descCells[0].style.display === '';
-      descCells.forEach(cell => {
-        cell.style.display = isHidden ? 'flex' : 'none';
-      });
-    });
-  });
+  
 });
 
 }
