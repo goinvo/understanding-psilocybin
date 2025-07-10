@@ -150,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setupLabelToggle('deprior-label');
   setupLabelToggle('peer-label');
+  setupLabelToggle('commercial-label');
 });
 
 }
