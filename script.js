@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
   if (depriorLabel) {
     depriorLabel.style.cursor = 'pointer';
     depriorLabel.addEventListener('click', function () {
-      const mainWrap = depriorLabel.querySelector('.label-main-wrap');
+      const main = depriorLabel.querySelector('.label-main');
       const desc = depriorLabel.querySelector('.label-desc');
-      if (mainWrap && desc) {
-        const isLabel = mainWrap.style.display !== 'none';
-        mainWrap.style.display = isLabel ? 'none' : '';
+      if (main && desc) {
+        const isLabel = main.style.display !== 'none';
+        main.style.display = isLabel ? 'none' : '';
         desc.style.display = isLabel ? '' : 'none';
       }
     });
