@@ -131,20 +131,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Toggle description for Deprioritization/Decriminalization
-  const depriorLabel = document.getElementById('deprior-label');
-  if (depriorLabel) {
-    depriorLabel.style.cursor = 'pointer';
-    depriorLabel.addEventListener('click', function () {
-      const main = depriorLabel.querySelector('.label-main');
-      const desc = depriorLabel.querySelector('.label-desc');
-      if (main && desc) {
-        const isLabel = main.style.display !== 'none';
-        main.style.display = isLabel ? 'none' : '';
-        desc.style.display = isLabel ? '' : 'none';
-      }
-    });
+  // Helper function for toggling label/desc
+  function setupLabelToggle(labelId) {
+    const label = document.getElementById(labelId);
+    if (label) {
+      label.style.cursor = 'pointer';
+      label.addEventListener('click', function () {
+        const main = label.querySelector('.label-main');
+        const desc = label.querySelector('.label-desc');
+        if (main && desc) {
+          const isLabel = main.style.display !== 'none';
+          main.style.display = isLabel ? 'none' : '';
+          desc.style.display = isLabel ? '' : 'none';
+        }
+      });
+    }
   }
+
+  setupLabelToggle('deprior-label');
+  setupLabelToggle('peer-label');
 });
 
 }
