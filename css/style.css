@@ -624,7 +624,7 @@ from {
 }
 
 .label-desc {
-  font-size: 0.6em;      /* slightly smaller than the label */
+  font-size: 0.85em;      /* slightly smaller than the label */
   font-weight: 300;       /* lighter weight */
   color: #09090b;            /* lighter gray for distinction */
   margin-left: 0;
