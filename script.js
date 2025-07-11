@@ -152,6 +152,8 @@ document.addEventListener('DOMContentLoaded', function () {
   setupLabelToggle('peer-label');
   setupLabelToggle('commercial-label');
   setupLabelToggle('religious-label');
+  setupLabelToggle('supervised-label');
+  setupLabelToggle('medical-label');
 });
 
 }
