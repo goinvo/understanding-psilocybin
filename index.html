@@ -23,12 +23,12 @@
                 <span class="megaphone-toggle" id="megaphone-toggle" tabindex="0" aria-label="Toggle call to action" style="width:1.2em; height:1.2em; display:inline-block; vertical-align:-0.2em;">
                   <canvas id="megaphone3d" width="48" height="32" style="width:1.2em; height:1.2em; display:block;"></canvas>
                   <svg id="megaphone-waves" width="48" height="32" viewBox="0 0 48 32" style="position:absolute; left:0.7em; top:0.1em; pointer-events:none;">
-                    <!-- First wave (closest to megaphone) -->
-                    <path class="megaphone-wave wave1" d="M14 16 Q22 8, 30 16" stroke="#09090b" stroke-width="1.5" fill="none"/>
-                    <!-- Second wave (middle) -->
-                    <path class="megaphone-wave wave2" d="M12 18 Q22 6, 32 18" stroke="#09090b" stroke-width="1.5" fill="none"/>
-                    <!-- Third wave (farthest, largest arc) -->
-                    <path class="megaphone-wave wave3" d="M10 20 Q22 4, 34 20" stroke="#09090b" stroke-width="1.5" fill="none"/>
+                    <!-- First wave (closest to megaphone), rotated 90 degrees around its start -->
+                    <path class="megaphone-wave wave1" d="M14 16 Q22 8, 30 16" stroke="#09090b" stroke-width="1.5" fill="none" transform="rotate(90 14 16)"/>
+                    <!-- Second wave (middle), rotated 90 degrees around its start -->
+                    <path class="megaphone-wave wave2" d="M12 18 Q22 6, 32 18" stroke="#90b4ce" stroke-width="1.5" fill="none" transform="rotate(90 12 18)"/>
+                    <!-- Third wave (farthest), rotated 90 degrees around its start -->
+                    <path class="megaphone-wave wave3" d="M10 20 Q22 4, 34 20" stroke="#A7D3B1" stroke-width="1.5" fill="none" transform="rotate(90 10 20)"/>
                   </svg>
                 </span>
                 <span id="cta-bubble" class="cta-bubble" hidden>
