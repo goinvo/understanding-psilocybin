@@ -26,7 +26,7 @@ if (canvas) {
 
   // Megaphone body (cylinder) with rounded ends
   const bodyGeometry = new THREE.CylinderGeometry(2, 2, 8, 64);
-  const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 120 });
+  const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xff2a2a, shininess: 120 });
   const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
   body.position.set(-4, 0, 0);
   body.rotation.z = Math.PI / 2;
@@ -64,7 +64,7 @@ if (canvas) {
 
   // Add a torus at the mouth of the horn for a rounded lip
   const lipGeometry = new THREE.TorusGeometry(4, 0.35, 24, 48);
-  const lipMaterial = hornMaterial;
+  const lipMaterial = new THREE.MeshPhongMaterial({ color: 0x000000, shininess: 150 }); // black
   const hornLip = new THREE.Mesh(lipGeometry, lipMaterial);
   hornLip.position.set(10, 0, 0);
   hornLip.rotation.y = Math.PI / 2;
