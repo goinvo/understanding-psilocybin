@@ -154,6 +154,8 @@ document.addEventListener('DOMContentLoaded', function () {
   setupLabelToggle('religious-label');
   setupLabelToggle('supervised-label');
   setupLabelToggle('medical-label');
+  setupLabelToggle('fda-label');
+  setupLabelToggle('monopoly-label');
 });
 
 }
