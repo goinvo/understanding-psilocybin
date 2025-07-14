@@ -646,8 +646,8 @@ from {
 /* Mobile styles for screens up to 767px */
 @media (max-width: 767px) {
   .cta-bubble {
-    left: 60px !important;
-    top: 5% !important;
+    left: 60vw !important;
+    top: -10% !important;
     width: 85vw !important;
     min-width: 0 !important;
     max-width: 240px !important;
