@@ -648,9 +648,9 @@ from {
   .cta-bubble {
     left: 8px !important;
     top: 110% !important;
-    width: 60vw !important;
+    width: 70vw !important;
     min-width: 0 !important;
-    max-width: 120px !important;
+    max-width: 150px !important;
     padding: 0.2em 0.3em !important;
     font-size: 0.75rem !important;
     z-index: 100 !important;
