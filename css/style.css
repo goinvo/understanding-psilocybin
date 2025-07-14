@@ -652,7 +652,7 @@ from {
     min-width: 0 !important;
     max-width: 240px !important;
     padding: 0.2em 0.3em !important;
-    font-size: 0.55rem !important;
+    font-size: 0.5rem !important;
     z-index: 100 !important;
     transform: none !important;
   }
