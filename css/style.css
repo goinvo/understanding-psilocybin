@@ -642,3 +642,18 @@ from {
   line-height: 1.4;
   font-family: 'Asap Condensed', sans-serif;
 }
+
+/* Mobile styles for screens up to 767px */
+@media (max-width: 767px) {
+  .cta-bubble {
+    left: 8px !important;
+    top: 110% !important;
+    width: 95vw !important;
+    min-width: 0 !important;
+    max-width: 340px !important;
+    padding: 0.75em 1em !important;
+    font-size: 1rem !important;
+    z-index: 100 !important;
+    transform: none !important;
+  }
+}
