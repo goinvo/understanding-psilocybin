@@ -557,18 +557,19 @@ from {
 }
 
 .megaphone-wave {
-  stroke-dasharray: 40;
-  stroke-dashoffset: 0;
-  animation: waveMove 1.2s infinite ease-in-out;
+  opacity: 0.2;
+  animation: waveBlink 1.2s infinite;
 }
+.wave1 { animation-delay: 0s; }
 .wave2 { animation-delay: 0.4s; }
 .wave3 { animation-delay: 0.8s; }
 
-@keyframes waveMove {
-  0%   { stroke-dashoffset: 40; opacity: 0.2; }
-  30%  { opacity: 1; }
-  60%  { stroke-dashoffset: 0; opacity: 1; }
-  100% { stroke-dashoffset: 40; opacity: 0.2; }
+@keyframes waveBlink {
+  0%   { opacity: 0.2; }
+  10%  { opacity: 1; }
+  50%  { opacity: 1; }
+  60%  { opacity: 0.2; }
+  100% { opacity: 0.2; }
 }
 
 /* CTA bubble styling */
