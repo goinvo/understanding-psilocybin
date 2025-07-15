@@ -662,4 +662,8 @@ from {
     justify-content: center;
     align-items: center;
   }
+  .cta-bubble::after {
+    display: none !important;
+    content: none !important;
+  }
 }
