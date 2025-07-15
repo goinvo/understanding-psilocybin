@@ -646,8 +646,9 @@ from {
 /* Mobile styles for screens up to 767px */
 @media (max-width: 767px) {
   .cta-bubble {
-    left: 45vw !important;
-    top: -50% !important;
+    position: absolute;
+    left: 8px !important;
+    top: 110% !important;
     width: 85vw !important;
     min-width: 0 !important;
     max-width: 240px !important;
@@ -655,7 +656,7 @@ from {
     font-size: 0.6rem !important;
     z-index: 100 !important;
     transform: none !important;
-    text-align: center; /* <-- add this */
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
