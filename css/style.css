@@ -661,6 +661,7 @@ from {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: popIn 0.22s cubic-bezier(.42,1.52,.58,1) both;
   }
 
   .cta-bubble::after {
