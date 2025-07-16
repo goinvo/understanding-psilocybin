@@ -135,16 +135,18 @@ body {
     border: none;      /* Ensures no border on hover */
 }
 
+/*
 .cell.invisible .label-text {
   display: flex;
-  justify-content: flex-start;   /* left align horizontally */
-  align-items: flex-start;       /* left align vertically */
+  justify-content: flex-start;   
+  align-items: flex-start;       
   width: 100%;
   height: 100%;
   padding: 0;
-  text-align: left;              /* left align text */
+  text-align: left;              
   font-size: 1.1em;
 }
+*/
 
 
 .cell.shadow0{
