@@ -137,12 +137,12 @@ body {
 
 .cell.invisible .label-text {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;   /* left align horizontally */
+  align-items: flex-start;       /* left align vertically */
   width: 100%;
   height: 100%;
   padding: 0;
-  text-align: center;
+  text-align: left;              /* left align text */
   font-size: 1.1em;
 }
 
