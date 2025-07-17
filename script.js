@@ -156,6 +156,33 @@ document.addEventListener('DOMContentLoaded', function () {
   setupLabelToggle('medical-label');
   setupLabelToggle('fda-label');
   setupLabelToggle('monopoly-label');
+
+  // Mobile label toggles (if different from desktop)
+  function setupMobileLabelToggle(labelId) {
+    const label = document.getElementById(labelId);
+    if (label) {
+      label.style.cursor = 'pointer';
+      label.addEventListener('click', function () {
+        const main = label.querySelector('.label-main');
+        const desc = label.querySelector('.label-desc');
+        if (main && desc) {
+          const isLabel = main.style.display !== 'none';
+          main.style.display = isLabel ? 'none' : '';
+          desc.style.display = isLabel ? '' : 'none';
+        }
+      });
+    }
+  }
+
+  // Repeat for each mobile label
+  setupMobileLabelToggle('deprior-mobile-label');
+  setupMobileLabelToggle('peer-mobile-label');
+  setupMobileLabelToggle('commercial-mobile-label');
+  setupMobileLabelToggle('religious-mobile-label');
+  setupMobileLabelToggle('supervised-mobile-label');
+  setupMobileLabelToggle('medical-mobile-label');
+  setupMobileLabelToggle('fda-mobile-label');
+  setupMobileLabelToggle('monopoly-mobile-label');
 });
 
 }

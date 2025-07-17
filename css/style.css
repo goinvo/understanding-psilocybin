@@ -676,7 +676,7 @@ from {
 
   .cta-bubble[hidden] {
   display: none !important;
-}
+  }
 
   .category-desc {
   font-size: 0.92em;
@@ -686,6 +686,24 @@ from {
   font-family: 'Asap Condensed', sans-serif;
   line-height: 1.4;
   text-align: left;
+  }
+
+   .category-label-text {
+    cursor: pointer;
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 1.1rem;
+    color: #09090b;
+    margin-bottom: 0.5em;
+    text-align: left;
+    display: block;
+  }
+  .category-label-text .label-desc {
+    font-size: 0.92em;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 0.5em;
+    line-height: 1.4;
+    text-align: left;
   }
   
 }
