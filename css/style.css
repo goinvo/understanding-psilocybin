@@ -706,7 +706,6 @@ from {
   .category-label-text .label-desc {
     display: inline;
     vertical-align: baseline;
-    z-index: 1;
   }
 
   .category-label-text .label-desc {
@@ -721,22 +720,6 @@ from {
   line-height: 1.3;
   text-align: left;
   margin-left: 0;
-  margin-bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-  z-index: 2;
-  background: #fff;
-  padding: 0.2em 0.5em;
-  border-radius: 0.4em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-  
-  .category-label-text.show-desc .label-desc {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
   }
 }
 

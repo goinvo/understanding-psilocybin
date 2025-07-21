@@ -163,15 +163,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (label) {
       label.style.cursor = 'pointer';
       label.addEventListener('click', function () {
-        /*
         const main = label.querySelector('.label-main');
         const desc = label.querySelector('.label-desc');
         if (main && desc) {
           const isLabel = main.style.display !== 'none';
           main.style.display = isLabel ? 'none' : '';
           desc.style.display = isLabel ? '' : 'none';
-        */
-        label.classList.toggle('show-desc');
+        }
       });
     }
   }
