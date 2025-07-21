@@ -167,9 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Example usage for each label:
   setupMobileLabelToggle('deprior-mobile-label');
-  // Repeat for each mobile label's ID
   setupMobileLabelToggle('peer-mobile-label');
   setupMobileLabelToggle('commercial-mobile-label');
   setupMobileLabelToggle('religious-mobile-label');
