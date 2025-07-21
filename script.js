@@ -161,21 +161,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function setupMobileLabelToggle(labelId) {
     const label = document.getElementById(labelId);
     if (label) {
-      label.style.cursor = 'pointer';
       label.addEventListener('click', function () {
-        const main = label.querySelector('.label-main');
-        const desc = label.querySelector('.label-desc');
-        if (main && desc) {
-          const isLabel = main.style.display !== 'none';
-          main.style.display = isLabel ? 'none' : '';
-          desc.style.display = isLabel ? '' : 'none';
-        }
+        label.classList.toggle('show-desc');
       });
     }
   }
 
-  // Repeat for each mobile label
+  // Example usage for each label:
   setupMobileLabelToggle('deprior-mobile-label');
+  // Repeat for each mobile label's ID
   setupMobileLabelToggle('peer-mobile-label');
   setupMobileLabelToggle('commercial-mobile-label');
   setupMobileLabelToggle('religious-mobile-label');
