@@ -91,6 +91,9 @@ body {
 
 .label-main {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: #bdbdbd;
 }
 
 .main-content {
