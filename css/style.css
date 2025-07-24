@@ -227,6 +227,13 @@ body {
     list-style-position: inside;
 }
 
+ol,
+ol.body-text {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  list-style-position: inside !important;
+}
+
 /*
 .card:hover {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
